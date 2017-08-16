@@ -190,7 +190,7 @@ a{
         left: 0;
         width: 100%;
         height: 100%;
-        background: #d26547;
+        background: #b3b3b3;
         z-index: -1;
         opacity: 0;
         -webkit-transform: scale3d(0.7, 1, 1);
@@ -767,7 +767,7 @@ h4{
 .newsletter_btn{
     width:180px;
     display: inline-block;
-    background: #D8836C;
+    background: #ccc;
     color: #fff;
     font-size: 22px;
     margin-top: 25px;
