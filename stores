@@ -3,7 +3,7 @@
     <h3>Store Directory</h3>
     <p>explore • enjoy • shop</p>
 </div>
-<div class="store_list_head main_container ">
+<div class="store_list_head main_container">
     <div class="row hidden_phone">
         <div class="col-md-6">
             <h5 class="active_heading">Shops & Services</h5>
