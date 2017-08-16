@@ -375,10 +375,7 @@ function renderJobs(container, template, collection){
         else {
             val.description_short = val.description;
         }
-        
-        // var show_date = new Date (val.start_date + "T04:00:00Z");
-        // val.published_on = get_month(show_date.getMonth()) + " " + show_date.getDate();
-        
+
         var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
         val.published_on = show_date.format("MMM D");
         
