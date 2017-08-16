@@ -99,10 +99,9 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1466179703000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-						<li><a href="/hours">Shopping Hours</a></li>
-						<li class="news_link"><a href="/news">News</a></li>
-						<li><a href="/tourist_info">Tourist Info</a></li>
-						<li><a href="//prettygreathsc.com" target="_blank">Redevelopment</a></li>
+						<li><a href="/hours">Hours</a></li>
+						<li><a href="/directions">Directions</a></li>
+						<li><a href="/parking" target="_blank">Parking</a></li>
 					</ul>
                 </li>
                 <li>
@@ -113,9 +112,8 @@
                     </a>
                     <ul class="sub_menu hidden_now">
                         <li><a href="/gift_cards">Gift Cards</a></li>
-						<li><a href="/community">Community</a></li>
-						<li><a href="/mall_services">Mall Services</a></li>
-						<li><a href="/consultations">Consultations</a></li>
+                        <li><a href="/amenities">Centre Amenities</a></li>
+						<li><a href="/accessibility">Accessibility</a></li>
 					</ul>
                 </li>
                 <li>
