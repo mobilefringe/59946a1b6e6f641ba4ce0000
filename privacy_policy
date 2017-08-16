@@ -5,13 +5,13 @@
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
         <div class="col-md-4">
-            <h5 id="halifaxcentre-cummunity"><a href="/pages/halifaxcentre-cummunity">COMMUNITY</a></h5>
+            <h5 id="halifaxcentre-cummunity"><a href=""></a></h5>
         </div>
         <div class="col-md-4 text-center">
-            <h5 id=""><a href="/pages/halifaxcentre-accessibility">ACCESSIBILITY</a></h5>
+            <h5 id=""><a href=""></a></h5>
         </div>
         <div class="col-md-4">
-            <h5 id=""><a href="/consultations">CONSULTATIONS</a></h5>
+            <h5 id=""><a href=""></a></h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
@@ -39,7 +39,7 @@
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
-            var pages_json = prefix+"/pages/" + slug + ".json"
+            var pages_json = prefix + "/pages/" + slug + ".json"
             $.getJSON(pages_json).done(function(data) {
                 $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content').html(data.body);
