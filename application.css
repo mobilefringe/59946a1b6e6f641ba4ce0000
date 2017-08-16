@@ -805,13 +805,13 @@ h4{
 }
 
 .opened_mobile_menu{
-    color: #c5c5c5;
+    color: #727272;
     padding: 50px 30px;
     h3 {
         font-weight: bold;
         font-size: 24px;
         margin-bottom: 0;
-        border-bottom: 1px solid #c5c5c5;
+        border-bottom: 1px solid #727272;
         padding-bottom: 15px;
     }
     ul {
@@ -821,11 +821,11 @@ h4{
 
         }
         a {
-            border-bottom: 1px solid #c5c5c5;
+            border-bottom: 1px solid #727272;
             display: block;
             padding: 15px 0;
             font-size: 24px;
-            color: #c5c5c5;
+            color: #727272;
             font-weight: 100;
             &:hover, &:focus, &:active{
                 text-decoration: none;
