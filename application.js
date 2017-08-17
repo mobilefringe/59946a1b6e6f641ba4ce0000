@@ -632,8 +632,7 @@ function renderPostDetails(container, template, collection, blog_posts){
         
         if(val.body.length > 100){
             val.description_short = val.body.substring(0,100) + "...";
-        }
-        else{
+        } else {
             val.description_short = val.body;
         }
 
@@ -645,7 +644,7 @@ function renderPostDetails(container, template, collection, blog_posts){
         var current_slug = val.slug;
         var index = blog_list.indexOf(current_slug);
         if(index >= 0 && index < blog_list.length){
-          var next_slug = blog_list[index + 1];
+            var next_slug = blog_list[index + 1];
             if(next_slug != undefined || next_slug != null){
                 val.next_post = "/posts/" + next_slug;
                 val.next_show = "display: block";
@@ -663,17 +662,14 @@ function renderPostDetails(container, template, collection, blog_posts){
             }
         }
 
-        val.twitter_title = val.title + " via @shopHSC";
+        val.twitter_title = val.title + " via @DevonshireMall";
         
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
-    
     $(container).html(item_rendered.join(''));
 }
 
-
-    
 function renderGallery(container, template, collection){
     var item_list = [];
     var item_rendered = [];
@@ -681,16 +677,13 @@ function renderGallery(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.photo_url.indexOf('missing.png') > -1) {
-            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
         } else {
             val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
         }
-
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
-    
-    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
