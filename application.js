@@ -555,7 +555,7 @@ function renderSinglePost(container, template, main_post){
     
     main_post.slug = "posts/" + main_post.slug;
     
-    main_post.twitter_title = main_post.title + " via @shopHSC";
+    main_post.twitter_title = main_post.title + " via @DevonshireMall";
     
     var rendered = Mustache.render(template_html, main_post);
     item_list.push(rendered);
