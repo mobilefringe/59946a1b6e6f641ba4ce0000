@@ -120,38 +120,29 @@ function renderPromotions(container, template, collection, centre){
             val.image_url = val.promo_image_url_abs;
             val.cat_list = store_details.categories.join(',')
             val.store_slug = "/stores/" + store_details.slug
-        }
-        else{
+        } else {
             val.image_url = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461163897000/Logo.png";
             val.store_name = mall_name;
             val.store_slug = "/"
             val.store_show = "display:none;";
         }
+        
         if (val.image_url.indexOf('missing.png') > 0){
             val.image_url  = "";
         }
+        
         if (val.description.length > 200){
             val.description_short = val.description.substring(0,200) + "...";
-        }
-        else {
+        } else {
             val.description_short = val.description
         }
-        // var show_date = new Date (val.show_on_web_date + "T04:00:00Z");
-        // start = new Date (val.start_date + "T04:00:00Z");
-        // end = new Date (val.end_date + "T04:00:00Z");
-        // if (start.toDateString() == end.toDateString()) {
-        //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate());    
-        // } else {
-        //     val.dates = (get_month(start.getMonth()))+" "+(start.getDate())+" - "+get_month(end.getMonth())+" "+end.getDate();    
-        // }
-        
+
         var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
         var start = moment(val.start_date).tz(getPropertyTimeZone());
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
         	val.dates = start.format("MMM D");
-        }
-        else {
+        } else {
         	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
         }
         
