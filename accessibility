@@ -8,10 +8,10 @@
             <h5 class="active_heading">ACCESSIBILITY</h5>
         </div>
         <div class="col-md-4">
-            <h5><a href="/green_initiatives">COMMUNITY PARTNERS</a></h5>
+            <h5><a href="/community_partners">COMMUNITY PARTNERS</a></h5>
         </div>
         <div class="col-md-4">
-            <h5 class="active_heading">PARKING</h5>
+            <h5><a href="/charities">CHARITIES & NON-PROFIT</a></h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
