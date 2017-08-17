@@ -31,5 +31,3 @@
         loadMallDataCached(renderAll); 
     })
 </script>
-    
-      
