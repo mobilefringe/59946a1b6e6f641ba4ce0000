@@ -1,3 +1,15 @@
+function renderGeneral(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    $.each( collection , function( key, val ) {
+        var repo_rendered = Mustache.render(template_html,val);
+        item_rendered.push(repo_rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
+
 function renderStoreList(container, template, collection, starter, breaker){
     var item_list = [];
     var item_rendered = [];
@@ -44,18 +56,6 @@ function renderStoreList(container, template, collection, starter, breaker){
     $(container).html(item_rendered.join(''));
 }
 
-function renderGeneral(container, template, collection){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-        var repo_rendered = Mustache.render(template_html,val);
-        item_rendered.push(repo_rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
 function renderStoreDetails(container, template, collection, slug){
     var item_list = [];
     var item_rendered = [];
@@ -64,7 +64,7 @@ function renderStoreDetails(container, template, collection, slug){
     item_list.push(collection);
     $.each( item_list , function( key, val ) {
         if ((val.store_front_url).indexOf('missing.png') > -1){
-            val.alt_store_front_url = "//codecloud.cdn.speedyrails.netssets.codecloudapp.com/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.alt_store_front_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
         } else {
             val.alt_store_front_url = getImageURL(val.store_front_url); 
         }
