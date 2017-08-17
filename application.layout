@@ -100,9 +100,8 @@
                     </a>
                     <ul class="sub_menu hidden_now">
                         <li><a href="/gift_cards">Services & Amenities</a></li>
-                        <li><a href="/gift_cards">Green Initiatives</a></li>
-                        <li><a href="/amenities">Parking</a></li>
-						<li><a href="/accessibility">Accessibility</a></li>
+                        <li><a href="/green_initiatives">Green Initiatives</a></li>
+                        <li><a href="/parking">Parking</a></li>
 					</ul>
                 </li>
                 <li>
@@ -112,10 +111,10 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-						<li><a href="/hours">Accessibility</a></li>
-						<li><a href="/directions">Community Partners</a></li>
-						<li><a href="/parking" target="_blank">Charities & Non-Profit</a></li>
-						<li><a href="/parking" target="_blank">Jobs</a></li>
+						<li><a href="/accessibility">Accessibility</a></li>
+						<li><a href="/community_partners">Community Partners</a></li>
+						<li><a href="/charities" target="_blank">Charities & Non-Profit</a></li>
+						<li><a href="/jobs" target="_blank">Jobs</a></li>
 					</ul>
                 </li>
                 <li>
@@ -125,10 +124,10 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-						<li><a href="/hours">Tourism Info Centre</a></li>
+						<li><a href="/tourism">Tourism Info Centre</a></li>
 						<li><a href="/directions">Driving Directions</a></li>
-						<li><a href="/parking" target="_blank">Map of the Area</a></li>
-						<li><a href="/parking" target="_blank">Public Transit</a></li>
+						<li><a href="/area_map" target="_blank">Map of the Area</a></li>
+						<li><a href="/public_transit" target="_blank">Public Transit</a></li>
 					</ul>
                 </li>
                 <li>
