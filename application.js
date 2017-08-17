@@ -1,213 +1,3 @@
-function renderGeneral(container, template, collection){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-        var repo_rendered = Mustache.render(template_html,val);
-        item_rendered.push(repo_rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderStoreList(container, template, collection, starter, breaker){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    var store_initial="";
-    $.each( collection , function( key, val ) {
-        if(!val.store_front_url ||  val.store_front_url.indexOf('missing.png') > -1 || val.store_front_url.length === 0){
-            val.alt_store_front_url = "";
-        } else {
-            val.alt_store_front_url = getImageURL(val.store_front_url);    
-        }
-        //var categories = getStoreCategories();
-        var current_initial = val.name[0];
-        val.cat_list = val.categories.join(',')
-        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
-            val.initial = "";
-            val.show = "display:none;";
-        } else {
-            val.initial = current_initial;
-            store_initial = current_initial;
-            val.show = "display:block;";
-        }
-        
-        if (val.promotions.length > 0){
-            val.promotion_exist = "display:inline-block";
-        } else {
-            val.promotion_exist = "display:none";
-        }
-        
-        if (val.jobs.length > 0){
-            val.job_exist = "display:inline-block";
-        } else {
-            val.job_exist = "display:none";
-        }
-        
-        val.block = current_initial + '-block';
-        var rendered = Mustache.render(template_html,val);
-        var upper_current_initial = current_initial.toUpperCase();
-        if (upper_current_initial.charCodeAt(0) <= breaker.charCodeAt(0) && upper_current_initial.charCodeAt(0) >= starter.charCodeAt(0)){
-            item_rendered.push(rendered);
-        }
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderStoreDetails(container, template, collection, slug){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    item_list.push(collection);
-    $.each( item_list , function( key, val ) {
-        if ((val.store_front_url).indexOf('missing.png') > -1){
-            val.alt_store_front_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-        } else {
-            val.alt_store_front_url = getImageURL(val.store_front_url); 
-        }
-        
-        if (val.website != null && val.website.length > 0){
-            val.show = "display:block";
-        } else {
-            val.show = "display:none";
-        }
-        
-        if (val.phone != null && val.phone.length > 0){
-            val.phone_show = "display:block";
-        } else {
-            val.phone_show = "display:none";
-        }
-        
-        if (val.twitter != null && val.twitter.length > 0){
-            val.twitter_show = "display:inline-block";
-        } else {
-            val.twitter_show = "display:none";
-        }
-        
-        if ((val.twitter == null || val.twitter == "") && (val.facebook == "" || val.facebook == null)){
-            val.hide_social = "display:none;";
-        }
-        
-        if (val.facebook != null && val.facebook.length > 0){
-            val.facebook_show = "display:inline-block";
-        } else {
-            val.facebook_show = "display:none";
-        }
-        
-        val.map_x_coordinate = val.x_coordinate - 19;
-        val.map_y_coordinate = val.y_coordinate - 58;
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderPromotions(container, template, collection, centre){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    $.each( collection , function( key, val ) {
-        if (val.promotionable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.promotionable_id);
-            val.store_detail_btn = store_details.slug ;
-            val.store_name = store_details.name;
-            val.store_show = "display:inline-block";
-            val.image_url = val.promo_image_url_abs;
-            val.cat_list = store_details.categories.join(',')
-            val.store_slug = "/stores/" + store_details.slug
-        } else {
-            val.image_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-            val.store_name = mall_name;
-            val.store_slug = "/"
-            val.store_show = "display:none;";
-        }
-        
-        if (val.image_url.indexOf('missing.png') > 0){
-            val.image_url  = "";
-        }
-        
-        if (val.description.length > 200){
-            val.description_short = val.description.substring(0,200) + "...";
-        } else {
-            val.description_short = val.description
-        }
-
-        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-        var start = moment(val.start_date).tz(getPropertyTimeZone());
-        var end = moment(val.end_date).tz(getPropertyTimeZone());
-        if (start.format("DMY") == end.format("DMY")){
-        	val.dates = start.format("MMM D");
-        } else {
-        	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-        }
-        
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
-function renderPromoDetails(container, template, collection, centre){
-    var item_list = [];
-    var item_rendered = [];
-    var template_html = $(template).html();
-    Mustache.parse(template_html); 
-    item_list.push(collection);
-    $.each( item_list , function( key, val ) {
-        if (val.promotionable_type == "Store") {
-            var store_details = getStoreDetailsByID(val.promotionable_id);
-            val.store_detail_btn = store_details.slug ;
-            val.store_name = store_details.name;
-            val.store_image = store_details.store_front_url_abs;
-            val.store_slug = store_details.slug
-            val.store_show = "display:block";
-            if (store_details.website != null && store_details.website.length > 0){
-                val.show = "display:block";
-                val.website = store_details.website
-            } else {
-                val.show = "display:none";
-            }
-            
-            if (store_details.phone != null && store_details.phone.length > 0){
-                val.phone_show = "display:block";
-                val.phone = store_details.phone
-            } else {
-                val.phone_show = "display:none";
-            }
-        } else {
-            val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-            val.store_show = "display:none";
-            val.phone_show = "display:none";
-            val.show = "display:none";
-        }
-        val.image_url = val.promo_image_url_abs
-        if(val.image_url.indexOf('missing.png') > 0){
-            val.image_url  = "//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1456246178000/promo_image.png";
-        }
-        if(val.promo_image_url_abs.indexOf('missing.png') > -1){
-            val.promo_image_show="display:none";
-        }
-
-        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-        var start = moment(val.start_date).tz(getPropertyTimeZone());
-        var end = moment(val.end_date).tz(getPropertyTimeZone());
-        if (start.format("DMY") == end.format("DMY")){
-        	val.dates = start.format("MMM D");
-        } else {
-        	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
-        }
-        
-        var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
-    });
-    $(container).html(item_rendered.join(''));
-}
-
 function renderEvents(container, template, collection, centre){
     var item_list = [];
     var item_rendered = [];
@@ -309,76 +99,61 @@ function renderEventDetails(container, template, collection, mall_name){
     $(container).html(item_rendered.join(''));
 }
 
-function renderJobs(container, template, collection){
+function renderFeatureItems(){
+    var items = getFeatureList();
+    $.each(items, function(i, val){
+        $('#feature_' + i).html('<a href="'+ val.url +'"><img src="'+ val.image_url+'" class="hoverer" alt="' +val.name+ '"><h5 class="center_h">'+ val.name +'</h5></a>')
+    })
+}
+
+function renderGallery(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
-    Mustache.parse(template_html); 
+    Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
-        if(val.jobable_type == "Store"){
-            val.store_name = getStoreDetailsByID(val.jobable_id).name;
-            val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
-            val.store_show = "display:block";
+        if (val.photo_url.indexOf('missing.png') > -1) {
+            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
         } else {
-            val.store_name = mall_name;
-            val.store_show = "display:none";
+            val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
         }
-        if (val.description.length > 200){
-            val.description_short = val.description.substring(0,200) + "...";
-        } else {
-            val.description_short = val.description;
-        }
-
-        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-        val.published_on = show_date.format("MMM D");
-        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
     $(container).html(item_rendered.join(''));
 }
 
-function renderJobDetails(container, template, collection, mall_name){
+function renderGeneral(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html); 
-    item_list.push(collection);
-    $.each( item_list , function( key, val ) {
-        if(val.jobable_type == "Store"){
-            var store_details = getStoreDetailsByID(val.jobable_id);
-            val.store_name = store_details.name;
-            val.store_image = store_details.store_front_url_abs;
-            if (store_details.website != null && store_details.website.length > 0){
-                val.show = "display:block";
-                val.website = store_details.website
-                val.store_slug = store_details.slug
-                val.store_show = "display:block";
-            } else {
-                val.show = "display:none";
-                val.store_show = "display:none";
-            }
-            if (store_details.phone != null && store_details.phone.length > 0){
-                val.phone_show = "display:block";
-                val.phone = store_details.phone
-            } else {
-                val.phone_show = "display:none";
-                val.show = "display:none";
-            }
-        } else {
-            val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-            val.store_show = "display:none";
-            val.phone_show = "display:none";
-            val.show = "display:none";
-        }
-        if (val.store_image.indexOf('missing.png') > 0){
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-        }
+    $.each( collection , function( key, val ) {
+        var repo_rendered = Mustache.render(template_html,val);
+        item_rendered.push(repo_rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
 
-        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
-        val.published_on = show_date.format("MMM D");
-    
+function renderHomeHours(container, template, collection){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    item_list.push(collection);    
+    $.each( item_list , function( key, val ) {
+        val.day = moment().format("ddd");
+        var d = moment();
+        val.month = moment().month();
+        val.weekday = moment().date();
+        if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
+            var open_time = moment(val.open_time).tz(getPropertyTimeZone());
+            var close_time = moment(val.close_time).tz(getPropertyTimeZone());
+            val.h = val.day + " " + open_time.format("h:mmA") + " - " + close_time.format("h:mmA");
+        } else {
+            val.h = "Closed";
+            $('.hours_dot').css("background", "#cd1629");
+        }
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
@@ -497,93 +272,183 @@ function renderHours(container, template, collection, type){
     $(container).html(item_rendered.join(''));
 }
 
-function renderEventsWithImgTemplate(template_id,html_id,not_empty_section_id,empty_section_id,events, type){
-    var item_list = [];
-    var sorted_list = [];
-    var template_html = $(template_id).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    $.each( events , function( key, val ) {
-        if(($.inArray(type, val.tags) != -1) && showOnWeb(val)){
-            if(hasImage(val.event_image_url)){
-                val.event_image_url = getImageURL(val.event_image_url);
-                val.event_image_url_abs = getAbsoluteImageURL(val.event_image_url_abs);
-            } else {
-                if (type=="development" || type=="news"){
-                    val.show = 'display:none';
-                } else {
-                    val.show = '';
-                }
-                val.event_image_url =  "//codecloud.cdn.speedyrails.net/sites/5438407c6e6f64462d020000/d17d8c90fe9a800df686233fab0e6569/default.jpg";
-            }
-            item_list.push(val);        
-        }
-    });
-    item_list.sort(sortByWebDate);
-        $.each( item_list , function( key, val ) {
-            var rendered = Mustache.render(template_html,val);
-            sorted_list.push(rendered);
-        });
-
-    if(sorted_list.length > 0){
-        $(not_empty_section_id).show();
-        $(empty_section_id).hide();
-        $(html_id).html(sorted_list.join(''));
-    }else{
-        $(not_empty_section_id).hide();
-        $(empty_section_id).show();
-    }
-}
-
-function renderHomeHours(container, template, collection){
+function renderJobs(container, template, collection){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
-    item_list.push(collection);    
-    $.each( item_list , function( key, val ) {
-        val.day = moment().format("ddd");
-        var d = moment();
-        val.month = moment().month();
-        val.weekday = moment().date();
-        if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
-            var open_time = moment(val.open_time).tz(getPropertyTimeZone());
-            var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-            val.h = val.day + " " + open_time.format("h:mmA") + " - " + close_time.format("h:mmA");
+    Mustache.parse(template_html); 
+    $.each( collection , function( key, val ) {
+        if(val.jobable_type == "Store"){
+            val.store_name = getStoreDetailsByID(val.jobable_id).name;
+            val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
+            val.store_show = "display:block";
         } else {
-            val.h = "Closed";
-            $('.hours_dot').css("background", "#cd1629");
+            val.store_name = mall_name;
+            val.store_show = "display:none";
         }
+        if (val.description.length > 200){
+            val.description_short = val.description.substring(0,200) + "...";
+        } else {
+            val.description_short = val.description;
+        }
+
+        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+        val.published_on = show_date.format("MMM D");
+        
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
     $(container).html(item_rendered.join(''));
 }
 
-function renderSinglePost(container, template, main_post){
+function renderJobDetails(container, template, collection, mall_name){
     var item_list = [];
+    var item_rendered = [];
     var template_html = $(template).html();
-    Mustache.parse(template_html);   // optional, speeds up future uses
+    Mustache.parse(template_html); 
+    item_list.push(collection);
+    $.each( item_list , function( key, val ) {
+        if(val.jobable_type == "Store"){
+            var store_details = getStoreDetailsByID(val.jobable_id);
+            val.store_name = store_details.name;
+            val.store_image = store_details.store_front_url_abs;
+            if (store_details.website != null && store_details.website.length > 0){
+                val.show = "display:block";
+                val.website = store_details.website
+                val.store_slug = store_details.slug
+                val.store_show = "display:block";
+            } else {
+                val.show = "display:none";
+                val.store_show = "display:none";
+            }
+            if (store_details.phone != null && store_details.phone.length > 0){
+                val.phone_show = "display:block";
+                val.phone = store_details.phone
+            } else {
+                val.phone_show = "display:none";
+                val.show = "display:none";
+            }
+        } else {
+            val.store_name = mall_name;
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+            val.store_show = "display:none";
+            val.phone_show = "display:none";
+            val.show = "display:none";
+        }
+        if (val.store_image.indexOf('missing.png') > 0){
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+        }
 
-    if (main_post.image_url.indexOf('missing.png') > 0) {
-        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
-    } else {
-        main_post.post_image = main_post.image_url;
-    }
+        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+        val.published_on = show_date.format("MMM D");
+    
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
+
+function renderPromotions(container, template, collection, centre){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    $.each( collection , function( key, val ) {
+        if (val.promotionable_type == "Store") {
+            var store_details = getStoreDetailsByID(val.promotionable_id);
+            val.store_detail_btn = store_details.slug ;
+            val.store_name = store_details.name;
+            val.store_show = "display:inline-block";
+            val.image_url = val.promo_image_url_abs;
+            val.cat_list = store_details.categories.join(',')
+            val.store_slug = "/stores/" + store_details.slug
+        } else {
+            val.image_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+            val.store_name = mall_name;
+            val.store_slug = "/"
+            val.store_show = "display:none;";
+        }
         
-    if(main_post.body.length > 235){
-        main_post.description_short = main_post.body.substring(0,235) + "...";
-    } else{
-        main_post.description_short = main_post.body;
-    }
-    main_post.description_short = main_post.description_short.replace("&amp;", "&");
-    
-    main_post.slug = "posts/" + main_post.slug;
-    
-    main_post.twitter_title = main_post.title + " via @shopHSC";
-    
-    var rendered = Mustache.render(template_html, main_post);
-    item_list.push(rendered);
-    $(container).html(item_list.join(''));
+        if (val.image_url.indexOf('missing.png') > 0){
+            val.image_url  = "";
+        }
+        
+        if (val.description.length > 200){
+            val.description_short = val.description.substring(0,200) + "...";
+        } else {
+            val.description_short = val.description
+        }
+
+        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+        var start = moment(val.start_date).tz(getPropertyTimeZone());
+        var end = moment(val.end_date).tz(getPropertyTimeZone());
+        if (start.format("DMY") == end.format("DMY")){
+        	val.dates = start.format("MMM D");
+        } else {
+        	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
+        }
+        
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    $(container).html(item_rendered.join(''));
+}
+
+function renderPromoDetails(container, template, collection, centre){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html); 
+    item_list.push(collection);
+    $.each( item_list , function( key, val ) {
+        if (val.promotionable_type == "Store") {
+            var store_details = getStoreDetailsByID(val.promotionable_id);
+            val.store_detail_btn = store_details.slug ;
+            val.store_name = store_details.name;
+            val.store_image = store_details.store_front_url_abs;
+            val.store_slug = store_details.slug
+            val.store_show = "display:block";
+            if (store_details.website != null && store_details.website.length > 0){
+                val.show = "display:block";
+                val.website = store_details.website
+            } else {
+                val.show = "display:none";
+            }
+            
+            if (store_details.phone != null && store_details.phone.length > 0){
+                val.phone_show = "display:block";
+                val.phone = store_details.phone
+            } else {
+                val.phone_show = "display:none";
+            }
+        } else {
+            val.store_name = mall_name;
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+            val.store_show = "display:none";
+            val.phone_show = "display:none";
+            val.show = "display:none";
+        }
+        val.image_url = val.promo_image_url_abs
+        if(val.image_url.indexOf('missing.png') > 0){
+            val.image_url  = "//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1456246178000/promo_image.png";
+        }
+        if(val.promo_image_url_abs.indexOf('missing.png') > -1){
+            val.promo_image_show="display:none";
+        }
+
+        var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
+        var start = moment(val.start_date).tz(getPropertyTimeZone());
+        var end = moment(val.end_date).tz(getPropertyTimeZone());
+        if (start.format("DMY") == end.format("DMY")){
+        	val.dates = start.format("MMM D");
+        } else {
+        	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
+        }
+        
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    $(container).html(item_rendered.join(''));
 }
 
 function renderPosts(container, template, collection){
@@ -670,26 +535,124 @@ function renderPostDetails(container, template, collection, blog_posts){
     $(container).html(item_rendered.join(''));
 }
 
-function renderGallery(container, template, collection){
+function renderSinglePost(container, template, main_post){
+    var item_list = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+
+    if (main_post.image_url.indexOf('missing.png') > 0) {
+        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+    } else {
+        main_post.post_image = main_post.image_url;
+    }
+        
+    if(main_post.body.length > 235){
+        main_post.description_short = main_post.body.substring(0,235) + "...";
+    } else{
+        main_post.description_short = main_post.body;
+    }
+    main_post.description_short = main_post.description_short.replace("&amp;", "&");
+    
+    main_post.slug = "posts/" + main_post.slug;
+    
+    main_post.twitter_title = main_post.title + " via @shopHSC";
+    
+    var rendered = Mustache.render(template_html, main_post);
+    item_list.push(rendered);
+    $(container).html(item_list.join(''));
+}
+
+function renderStoreList(container, template, collection, starter, breaker){
     var item_list = [];
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
+    var store_initial="";
     $.each( collection , function( key, val ) {
-        if (val.photo_url.indexOf('missing.png') > -1) {
-            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+        if(!val.store_front_url ||  val.store_front_url.indexOf('missing.png') > -1 || val.store_front_url.length === 0){
+            val.alt_store_front_url = "";
         } else {
-            val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
+            val.alt_store_front_url = getImageURL(val.store_front_url);    
         }
+        //var categories = getStoreCategories();
+        var current_initial = val.name[0];
+        val.cat_list = val.categories.join(',')
+        if(store_initial.toLowerCase() == current_initial.toLowerCase()){
+            val.initial = "";
+            val.show = "display:none;";
+        } else {
+            val.initial = current_initial;
+            store_initial = current_initial;
+            val.show = "display:block;";
+        }
+        
+        if (val.promotions.length > 0){
+            val.promotion_exist = "display:inline-block";
+        } else {
+            val.promotion_exist = "display:none";
+        }
+        
+        if (val.jobs.length > 0){
+            val.job_exist = "display:inline-block";
+        } else {
+            val.job_exist = "display:none";
+        }
+        
+        val.block = current_initial + '-block';
         var rendered = Mustache.render(template_html,val);
-        item_rendered.push(rendered);
+        var upper_current_initial = current_initial.toUpperCase();
+        if (upper_current_initial.charCodeAt(0) <= breaker.charCodeAt(0) && upper_current_initial.charCodeAt(0) >= starter.charCodeAt(0)){
+            item_rendered.push(rendered);
+        }
     });
     $(container).html(item_rendered.join(''));
 }
 
-function renderFeatureItems(){
-    var items = getFeatureList();
-    $.each(items, function(i, val){
-        $('#feature_' + i).html('<a href="'+ val.url +'"><img src="'+ val.image_url+'" class="hoverer" alt="' +val.name+ '"><h5 class="center_h">'+ val.name +'</h5></a>')
-    })
+function renderStoreDetails(container, template, collection, slug){
+    var item_list = [];
+    var item_rendered = [];
+    var template_html = $(template).html();
+    Mustache.parse(template_html);   // optional, speeds up future uses
+    item_list.push(collection);
+    $.each( item_list , function( key, val ) {
+        if ((val.store_front_url).indexOf('missing.png') > -1){
+            val.alt_store_front_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+        } else {
+            val.alt_store_front_url = getImageURL(val.store_front_url); 
+        }
+        
+        if (val.website != null && val.website.length > 0){
+            val.show = "display:block";
+        } else {
+            val.show = "display:none";
+        }
+        
+        if (val.phone != null && val.phone.length > 0){
+            val.phone_show = "display:block";
+        } else {
+            val.phone_show = "display:none";
+        }
+        
+        if (val.twitter != null && val.twitter.length > 0){
+            val.twitter_show = "display:inline-block";
+        } else {
+            val.twitter_show = "display:none";
+        }
+        
+        if ((val.twitter == null || val.twitter == "") && (val.facebook == "" || val.facebook == null)){
+            val.hide_social = "display:none;";
+        }
+        
+        if (val.facebook != null && val.facebook.length > 0){
+            val.facebook_show = "display:inline-block";
+        } else {
+            val.facebook_show = "display:none";
+        }
+        
+        val.map_x_coordinate = val.x_coordinate - 19;
+        val.map_y_coordinate = val.y_coordinate - 58;
+        var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
+    $(container).html(item_rendered.join(''));
 }
