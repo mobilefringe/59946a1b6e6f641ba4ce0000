@@ -83,25 +83,13 @@
                 </li>
                 <li>
                     <a href="#"  class="submenu_expander">
-                        SPECIAL OFFERS
+                        WHAT'S HAPPENING
                         <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;">
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
+                        <li><a href="/events">Events</a></li>
 						<li><a href="/promotions">Promotions</a></li>
-						<li><a href="/events">Events</a></li>
-					</ul>
-                </li>
-                <li>
-                    <a href="#" class="submenu_expander">
-                        PLAN YOUR VISIT
-                        <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;">
-						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
-                    </a>
-                    <ul class="sub_menu hidden_now">
-						<li><a href="/hours">Hours</a></li>
-						<li><a href="/directions">Directions</a></li>
-						<li><a href="/parking" target="_blank">Parking</a></li>
 					</ul>
                 </li>
                 <li>
@@ -111,9 +99,36 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-                        <li><a href="/gift_cards">Gift Cards</a></li>
-                        <li><a href="/amenities">Centre Amenities</a></li>
+                        <li><a href="/gift_cards">Services & Amenities</a></li>
+                        <li><a href="/gift_cards">Green Initiatives</a></li>
+                        <li><a href="/amenities">Parking</a></li>
 						<li><a href="/accessibility">Accessibility</a></li>
+					</ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu_expander">
+                        Information
+                        <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;">
+						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
+                    </a>
+                    <ul class="sub_menu hidden_now">
+						<li><a href="/hours">Accessibility</a></li>
+						<li><a href="/directions">Community Partners</a></li>
+						<li><a href="/parking" target="_blank">Charities & Non-Profit</a></li>
+						<li><a href="/parking" target="_blank">Jobs</a></li>
+					</ul>
+                </li>
+                <li>
+                    <a href="#" class="submenu_expander">
+                        TOURISM
+                        <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;">
+						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
+                    </a>
+                    <ul class="sub_menu hidden_now">
+						<li><a href="/hours">Tourism Info Centre</a></li>
+						<li><a href="/directions">Driving Directions</a></li>
+						<li><a href="/parking" target="_blank">Map of the Area</a></li>
+						<li><a href="/parking" target="_blank">Public Transit</a></li>
 					</ul>
                 </li>
                 <li>
@@ -123,6 +138,7 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
+                        <li><a href="/hours">Shopping Hours</a></li>
 						<li><a href="/contact_us">Contact Us</a></li>
 						<li><a href="/leasing">Leasing</a></li>
 						<li><a href="/security">Security</a></li>
