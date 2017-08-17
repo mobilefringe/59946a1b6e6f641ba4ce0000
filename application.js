@@ -16,24 +16,24 @@ function renderStoreList(container, template, collection, starter, breaker){
         if(store_initial.toLowerCase() == current_initial.toLowerCase()){
             val.initial = "";
             val.show = "display:none;";
-        }
-        else {
+        } else {
             val.initial = current_initial;
             store_initial = current_initial;
             val.show = "display:block;";
         }
+        
         if (val.promotions.length > 0){
             val.promotion_exist = "display:inline-block";
-        }
-        else {
+        } else {
             val.promotion_exist = "display:none";
         }
+        
         if (val.jobs.length > 0){
             val.job_exist = "display:inline-block";
-        }
-        else {
+        } else {
             val.job_exist = "display:none";
         }
+        
         val.block = current_initial + '-block';
         var rendered = Mustache.render(template_html,val);
         var upper_current_initial = current_initial.toUpperCase();
@@ -41,7 +41,6 @@ function renderStoreList(container, template, collection, starter, breaker){
             item_rendered.push(rendered);
         }
     });
-    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
