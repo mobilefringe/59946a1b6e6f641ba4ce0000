@@ -68,40 +68,40 @@ function renderStoreDetails(container, template, collection, slug){
         } else {
             val.alt_store_front_url = getImageURL(val.store_front_url); 
         }
+        
         if (val.website != null && val.website.length > 0){
             val.show = "display:block";
-        }
-        else {
+        } else {
             val.show = "display:none";
         }
+        
         if (val.phone != null && val.phone.length > 0){
             val.phone_show = "display:block";
-        }
-        else {
+        } else {
             val.phone_show = "display:none";
         }
         
         if (val.twitter != null && val.twitter.length > 0){
             val.twitter_show = "display:inline-block";
-        }
-        else {
+        } else {
             val.twitter_show = "display:none";
         }
+        
         if ((val.twitter == null || val.twitter == "") && (val.facebook == "" || val.facebook == null)){
             val.hide_social = "display:none;";
         }
+        
         if (val.facebook != null && val.facebook.length > 0){
             val.facebook_show = "display:inline-block";
-        }
-        else {
+        } else {
             val.facebook_show = "display:none";
         }
+        
         val.map_x_coordinate = val.x_coordinate - 19;
         val.map_y_coordinate = val.y_coordinate - 58;
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
-    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
@@ -120,7 +120,7 @@ function renderPromotions(container, template, collection, centre){
             val.cat_list = store_details.categories.join(',')
             val.store_slug = "/stores/" + store_details.slug
         } else {
-            val.image_url = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461163897000/Logo.png";
+            val.image_url = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
             val.store_name = mall_name;
             val.store_slug = "/"
             val.store_show = "display:none;";
@@ -180,7 +180,7 @@ function renderPromoDetails(container, template, collection, centre){
             }
         } else {
             val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461163897000/Logo.png";
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
             val.store_show = "display:none";
             val.phone_show = "display:none";
             val.show = "display:none";
@@ -198,8 +198,7 @@ function renderPromoDetails(container, template, collection, centre){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
         	val.dates = start.format("MMM D");
-        }
-        else {
+        } else {
         	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
         }
         
@@ -221,8 +220,7 @@ function renderEvents(container, template, collection, centre){
             val.store_name = store_details.name;
             val.image_url = store_details.store_front_url_abs;
             val.cat_list = store_details.categories.join(',')
-        }
-        else {
+        } else {
             val.store_name = centre;
             val.image_url = "//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1456246178000/promo_image.png";
         }
@@ -231,8 +229,7 @@ function renderEvents(container, template, collection, centre){
         }
         if (val.description.length > 200){
             val.description_short = val.description.substring(0,200) + "...";
-        }
-        else {
+        } else {
             val.description_short = val.description
         }
         if (val.event_image_url_abs.indexOf('missing.png') > -1){
@@ -244,8 +241,7 @@ function renderEvents(container, template, collection, centre){
         var end = moment(val.end_date).tz(getPropertyTimeZone());
         if (start.format("DMY") == end.format("DMY")){
         	val.dates = start.format("MMM D");
-        }
-        else {
+        } else {
         	val.dates = start.format("MMM D") + " - " + end.format("MMM D");
         }
         
@@ -277,15 +273,13 @@ function renderEventDetails(container, template, collection, mall_name){
             if (store_details.phone != null && store_details.phone.length > 0){
                 val.phone_show = "display:block";
                 val.phone = store_details.phone
-            }
-            else{
+            } else{
                 val.phone_show = "display:none";
                 val.show = "display:none";
             }
-        }
-        else{
+        } else {
             val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
             val.store_show = "display:none";
             val.phone_show = "display:none";
             val.show = "display:none";
@@ -325,15 +319,13 @@ function renderJobs(container, template, collection){
             val.store_name = getStoreDetailsByID(val.jobable_id).name;
             val.store_slug = getStoreDetailsByID(val.jobable_id).slug;
             val.store_show = "display:block";
-        }
-        else {
+        } else {
             val.store_name = mall_name;
             val.store_show = "display:none";
         }
         if (val.description.length > 200){
             val.description_short = val.description.substring(0,200) + "...";
-        }
-        else {
+        } else {
             val.description_short = val.description;
         }
 
@@ -362,28 +354,26 @@ function renderJobDetails(container, template, collection, mall_name){
                 val.website = store_details.website
                 val.store_slug = store_details.slug
                 val.store_show = "display:block";
-            }
-            else {
+            } else {
                 val.show = "display:none";
                 val.store_show = "display:none";
             }
             if (store_details.phone != null && store_details.phone.length > 0){
                 val.phone_show = "display:block";
                 val.phone = store_details.phone
-            }
-            else {
+            } else {
                 val.phone_show = "display:none";
                 val.show = "display:none";
             }
         } else {
             val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
             val.store_show = "display:none";
             val.phone_show = "display:none";
             val.show = "display:none";
         }
         if (val.store_image.indexOf('missing.png') > 0){
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
         }
 
         var show_date = moment(val.show_on_web_date).tz(getPropertyTimeZone());
@@ -444,37 +434,6 @@ function renderHours(container, template, collection, type){
         collection = []
         collection = item_list;
     }
-    // if (type == "holiday_hours") {
-    //     $.each( collection , function( key, val ) {
-    //         if (!val.store_id && val.is_holiday == true) {
-    //             holiday = new Date (val.holiday_date)
-    //             holiday.setDate(holiday.getDate()+1);
-    //             var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //             val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
-    //             if (val.open_time && val.close_time && val.is_closed == false){
-    //                 var open_time = new Date (val.open_time)
-    //                 var close_time = new Date (val.close_time)
-    //                 val.open_time = convert_hour(open_time);
-    //                 val.close_time = convert_hour(close_time);    
-    //                 if (val.open_time == "0:00 AM"){
-    //                     val.open_time = "12:00 AM"
-    //                 }
-    //                  if (val.close_time == "0:00 AM"){
-    //                     val.close_time = "12:00 AM"
-    //                 }
-    //                 val.h = val.open_time+ " - " + val.close_time;
-    //             } else {
-    //                 val.h = "Closed"
-    //             }
-    //             if (val.h != "Closed"){
-    //                 item_list.push(val)
-    //             }
-    //         }
-    //     });
-    //     collection = []
-    //     collection = item_list;
-    // }
-    
     if (type == "holiday_hours") {
         $.each( collection , function( key, val ) {
             if (!val.store_id && val.is_holiday == true) {
@@ -488,7 +447,7 @@ function renderHours(container, template, collection, type){
                     if (val.open_time == "0:00 AM"){
                         val.open_time = "12:00 AM"
                     }
-                     if (val.close_time == "0:00 AM"){
+                    if (val.close_time == "0:00 AM"){
                         val.close_time = "12:00 AM"
                     }
                     val.h = open_time.format("h:mmA") + " - " + close_time.format("h:mmA");
@@ -503,36 +462,6 @@ function renderHours(container, template, collection, type){
         collection = []
         collection = item_list;
     }
-    // if (type == "closed_hours") {
-    //     $.each( collection , function( key, val ) {
-    //         if (!val.store_id && val.is_holiday == true) {
-    //             holiday = new Date (val.holiday_date + "T05:00:00Z")
-    //             var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    //             val.formatted_date = weekdays[holiday.getDay()]+ " " + get_month(holiday.getMonth()) + " " +holiday.getDate()+ " " + holiday.getFullYear()
-    //             if (val.open_time && val.close_time && val.is_closed == false){
-    //                 var open_time = new Date (val.open_time)
-    //                 var close_time = new Date (val.close_time)
-    //                 val.open_time = convert_hour(open_time);
-    //                 val.close_time = convert_hour(close_time);    
-    //                 if (val.open_time == "0:00 AM"){
-    //                     val.open_time = "12:00 AM"
-    //                 }
-    //                  if (val.close_time == "0:00 AM"){
-    //                     val.close_time = "12:00 AM"
-    //                 }
-    //                 val.h = val.open_time+ " to " + val.close_time;
-    //             } else {
-    //                 val.h = "Closed"
-    //             }
-    //             if (val.h == "Closed"){
-    //                 item_list.push(val)
-    //             }
-    //         }
-    //     });
-    //     collection = []
-    //     collection = item_list;
-    // }
-    
     if (type == "closed_hours") {
         $.each( collection , function( key, val ) {
             if (!val.store_id && val.is_holiday == true) {
@@ -546,7 +475,7 @@ function renderHours(container, template, collection, type){
                     if (val.open_time == "0:00 AM"){
                         val.open_time = "12:00 AM"
                     }
-                     if (val.close_time == "0:00 AM"){
+                    if (val.close_time == "0:00 AM"){
                         val.close_time = "12:00 AM"
                     }
                     val.h = open_time.format("h:mm A") + " to " + close_time.format("h:mm A");
@@ -565,7 +494,6 @@ function renderHours(container, template, collection, type){
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
     });
-    $(container).show();
     $(container).html(item_rendered.join(''));
 }
 
@@ -595,8 +523,7 @@ function renderEventsWithImgTemplate(template_id,html_id,not_empty_section_id,em
             var rendered = Mustache.render(template_html,val);
             sorted_list.push(rendered);
         });
-      
-   // console.log(sorted_list);
+
     if(sorted_list.length > 0){
         $(not_empty_section_id).show();
         $(empty_section_id).hide();
@@ -614,25 +541,10 @@ function renderHomeHours(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     item_list.push(collection);    
     $.each( item_list , function( key, val ) {
-        // val.day = get_day(val.day_of_week);
-        // var d = new Date();
-        // val.month = get_month(d.getMonth());
-        // val.weekday = addZero(d.getDate());
-        // if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
-        //     var open_time = new Date (val.open_time);
-        //     var close_time = new Date (val.close_time);
-        //     val.open_time = convert_hour(open_time);
-        //     val.close_time = convert_hour(close_time);    
-        //     val.h = get_day(d.getDay()) + " " + val.open_time+ " - " + val.close_time;
-        // } else {
-        //     val.h = "Closed";
-        // }
-        
         val.day = moment().format("ddd");
         var d = moment();
         val.month = moment().month();
         val.weekday = moment().date();
-        
         if (val.open_time && val.close_time && (val.is_closed == false || val.is_closed == null)){
             var open_time = moment(val.open_time).tz(getPropertyTimeZone());
             var close_time = moment(val.close_time).tz(getPropertyTimeZone());
@@ -653,7 +565,7 @@ function renderSinglePost(container, template, main_post){
     Mustache.parse(template_html);   // optional, speeds up future uses
 
     if (main_post.image_url.indexOf('missing.png') > 0) {
-        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+        main_post.post_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
     } else {
         main_post.post_image = main_post.image_url;
     }
