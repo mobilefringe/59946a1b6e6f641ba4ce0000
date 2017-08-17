@@ -572,8 +572,7 @@ function renderSinglePost(container, template, main_post){
         
     if(main_post.body.length > 235){
         main_post.description_short = main_post.body.substring(0,235) + "...";
-    }
-    else{
+    } else{
         main_post.description_short = main_post.body;
     }
     main_post.description_short = main_post.description_short.replace("&amp;", "&");
@@ -595,7 +594,7 @@ function renderPosts(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.image_url.indexOf('missing.png') > -1) {
-            val.post_image = "//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1461352407000/HallifaxLogo.png";
+            val.post_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
         } else {
             val.post_image = val.image_url;
         }
