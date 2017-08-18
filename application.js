@@ -199,7 +199,7 @@ function renderHours(container, template, collection, type){
             if (val.open_time && val.close_time && val.is_closed == false){
                 var open_time = moment(val.open_time).tz(getPropertyTimeZone());
                 var close_time = moment(val.close_time).tz(getPropertyTimeZone());
-                val.h = open_time.format("h:mm A") + " - " + close_time.format("h:mmA");
+                val.h = open_time.format("h:mmA") + " - " + close_time.format("h:mmA");
             } else {
                 "Closed"
             }
@@ -242,7 +242,7 @@ function renderHours(container, template, collection, type){
             if (!val.store_id && val.is_holiday == true) {
                 holiday = moment(val.holiday_date).tz(getPropertyTimeZone());
                 var weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-                val.formatted_date = holiday.format("dddd MMM D YYYY");
+                val.formatted_date = holiday.format("ddd, MMM D, YYYY");
                 
                 if (val.open_time && val.close_time && val.is_closed == false){
                     var open_time = moment(val.open_time).tz(getPropertyTimeZone());
@@ -253,7 +253,7 @@ function renderHours(container, template, collection, type){
                     if (val.close_time == "0:00 AM"){
                         val.close_time = "12:00 AM"
                     }
-                    val.h = open_time.format("h:mm A") + " to " + close_time.format("h:mm A");
+                    val.h = open_time.format("h:mmA") + " to " + close_time.format("h:mmA");
                 } else {
                     val.h = "Closed"
                 }
