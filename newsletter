@@ -50,9 +50,9 @@ $(document).ready(function(e){
 
 $("#subForm").submit(function( e ) {
     e.preventDefault();
-    if ($("#agree_newsletter_page").prop("checked") != true){
-        alert("Please agree to the receiving newsletter.");
-        $("#agree_newsletter_page").focus();
+    if ($("#agree_terms").prop("checked") != true){
+        alert("Please agree to receive newsletters from Devonshire Mall.");
+        $("#agree_terms").focus();
     } else {
         $.getJSON(
             this.action + "?callback=?",
@@ -62,7 +62,7 @@ $("#subForm").submit(function( e ) {
                     alert("Please try again later.");
                 } else { // 200
                     alert("Thank you for subscribing to our newsletter.");
-                    $('#newsletter_form').trigger('reset')
+                    $('#subform').trigger('reset')
                 }
         });
     }
