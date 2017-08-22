@@ -33,6 +33,8 @@
     $(document).ready(function(e){
         init(e);
         show_content();
+        
+        $.validate();
     })
 
     $("#newsletter_form").submit(function( e ) {
