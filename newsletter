@@ -38,7 +38,11 @@
             </div>
         </form>
         <div class="margin_20"></div>
-        
+        <div class="row">
+            <div class="col-md-12">
+                <p id="thank_you" class="hidden_now">Thank you for subscribing to our newsletter.</p>
+            </div>
+        </div>
     </div>
 </div>
 <script>
@@ -65,8 +69,8 @@ $("#subForm").submit(function( e ) {
                 if (data.Status === 400) {
                     alert("Please try again later.");
                 } else { // 200
-                    alert("Thank you for subscribing to our newsletter.");
-                    $('#subform').trigger('reset')
+                    $(".thank_you").show();
+                    $('#subForm').trigger('reset')
                 }
         });
     }
