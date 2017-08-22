@@ -23,10 +23,12 @@
             </div>
             <div class="margin_20"></div>
             <div class="row">
-                <label class="agree_terms">
-                    <input id="agree_terms" type="checkbox" required data-validation="required" tabindex="3"/> 
-                        I agree to receive communications from Devonshire Mall.
+                <div class="col-md-12">
+                    <label class="agree_terms">
+                        <input id="agree_terms" type="checkbox" required data-validation="required" tabindex="3"/> 
+                            I agree to receive communications from Devonshire Mall.
                     </label>
+                </div>
             </div>
             <div class="margin_20"></div>
             <div class="row">
@@ -35,6 +37,8 @@
                 </div>
             </div>
         </form>
+        <div class="margin_20"></div>
+        
     </div>
 </div>
 <script>
