@@ -69,7 +69,7 @@ $("#subForm").submit(function( e ) {
                 if (data.Status === 400) {
                     alert("Please try again later.");
                 } else { // 200
-                    $(".thank_you").show();
+                    $("#thank_you").show();
                     $('#subForm').trigger('reset')
                 }
         });
