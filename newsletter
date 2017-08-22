@@ -28,7 +28,7 @@
                         I agree to receive communications from Devonshire Mall.
                     </label>
             </div>
-            
+            <div class="margin_20"></div>
             <div class="row">
                 <div class="col-md-12">
                     <button class="newsletter_btn animated_btn" type="submit" tabindex="4">Subscribe</button>
