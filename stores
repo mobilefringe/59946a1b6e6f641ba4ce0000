@@ -97,22 +97,21 @@
             
             if (new_stores.length > 0){
                 renderGeneral("#new_store_container","#new_store_template", new_stores);
-            }
-            else{
+            } else {
                 $('#new_stores').hide();
             }
             
-             if (coming_soon_stores.length > 0){
+            if (coming_soon_stores.length > 0){
                 renderGeneral("#coming_soon_container","#coming_soon_template", coming_soon_stores);
-            }
-            else{
+            } else {
                 $('#coming_soon_stores').hide();
             }
             show_content();
+            
             $.each(stores, function(i, val){
                 x = val.x_coordinate - 19;
                 y = val.y_coordinate - 58;
-               $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none"><a style="color:#fff" href=/stores/'+val.slug +'>' + val.name + '</a></div>')
+                $('#map_image').after('<div class="marker" id="store_' + val.id  + '" data-coords="' + x + ', ' + y + '" style="display:none"><a style="color:#fff" href=/stores/'+val.slug +'>' + val.name + '</a></div>')
             });  
             
             $('#map').craftmap({
@@ -124,7 +123,6 @@
     				position: 'center'
     			}
     		});
-            
         }
         
 		loadMallDataCached(renderAll); 
