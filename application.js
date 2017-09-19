@@ -384,9 +384,9 @@ function renderPromotions(container, template, collection, centre){
             val.store_show = "display:none;";
         }
         
-        if (val.image_url.indexOf('missing.png') > 0){
-            val.image_url  = "";
-        }
+        // if (val.image_url.indexOf('missing.png') > 0){
+        //     val.image_url  = "";
+        // }
         
         if (val.description.length > 200){
             val.description_short = val.description.substring(0,200) + "...";
