@@ -22,6 +22,7 @@
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/community_partners">Community Partners</option>
             <option value="/charities">Charities & Non-Profit</option>
+            <option value="/jobs">Jobs</option>
         </select>
     </h5>
 </div>
