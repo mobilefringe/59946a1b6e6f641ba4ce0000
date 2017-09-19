@@ -359,7 +359,7 @@ function renderPromotions(container, template, collection, centre){
             val.store_detail_btn = store_details.slug ;
             val.store_name = store_details.name;
             val.store_show = "display:inline-block";
-            
+            val.image_url = val.promo_image_url_abs;
             if (val.promo_image_url_abs.indexOf('missing.png') > 0){
                 val.image_url  = store_details.store_front_url_abs;
             }
