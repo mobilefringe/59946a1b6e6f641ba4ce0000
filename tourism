@@ -11,7 +11,7 @@
             <h5><a href="/directions">DIRECTIONS</a></h5>
         </div>
         <div class="col-md-3">
-            <h5><a href="/directions">AREA MAP</a></h5>
+            <h5><a href="/area_map">AREA MAP</a></h5>
         </div>
         <div class="col-md-3">
             <h5><a href="/public_transit">PUBLIC TRANSIT</a></h5>
