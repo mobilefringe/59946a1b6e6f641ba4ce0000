@@ -42,6 +42,7 @@
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
             var pages_json = prefix + "/pages/devonshire-area-map.json"
+            console.log(pages_json)
             $.getJSON(pages_json).done(function(data) {
                 $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content').html(data.body);
