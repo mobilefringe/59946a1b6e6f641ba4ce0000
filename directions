@@ -46,9 +46,14 @@
             prefix = get_prefix();
             var directions_json = prefix + "/pages/devonshire-directions.json"
             var parking_json = prefix + "/pages/devonshire-parking.json"
-            $.getJSON(pages_json).done(function(data) {
-                $('#mm_page_title').html(data.title.toUpperCase());
+            $.getJSON(directions_json).done(function(data) {
                 $('#mm_page_content_directions').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+            $.getJSON(parking_json).done(function(data) {
                 $('#mm_page_content_parking').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
