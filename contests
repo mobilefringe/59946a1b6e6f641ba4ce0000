@@ -112,7 +112,7 @@
             if(contest_details != null){
                 renderContest("#contest_container", '#contest_template', contest_details);
             } else {
-                $("#no_contests").show()l;
+                $("#no_contests").show();
             }
 
             show_content();
