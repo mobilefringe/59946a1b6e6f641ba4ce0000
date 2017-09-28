@@ -27,9 +27,27 @@
     <div class="margin_25_across">
         <div class="row">
             <div class="col-md-12">
+                <h4 class="center caps margin_30">Contact Us for Questions, Comments, and more Information</h4>
+                <form name="contact_form" id="contact_form" method="post">
+                    <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
+                    <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
+                    <input name="subject" id="subject" class="form-control" type="text" placeholder="Subject" required>
+                    <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
+                    <button id="submit" class="contact_btn" type="submit">SUBMIT</button>
+                </form>
+                <br>
+                <div id="send_contact_success" class="alert alert-success hidden_now" role="alert">
+                    <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
+                    <span class="sr-only">Success</span>
+                    Thank you for contacting us. A member from our team will contact you shortly.
+                 </div>
+                 <div id="send_contact_error" class="alert alert-danger hidden_now" role="alert">
+                    <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                    <span class="sr-only">Error:</span>
+                    There was an error when trying to submit your request. Please ensure you have entered a valid email address and subject and please try again.
+                 </div>
+                 <hr>
                 <div id="mm_page_content"></div>
-                <!--<div class="map_overlay" onClick="style.pointerEvents='none'"></div>-->
-                <!--<iframe style="width:100%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5904.339282420372!2d-83.002073!3d42.274902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xffb5dac0f54be5d1!2sDevonshire+Mall!5e0!3m2!1sen!2sus!4v1502907058117" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>-->
             </div>
         </div>
     </div>
