@@ -109,7 +109,7 @@
         init(e);
         function renderPageData(){
             var contest_details = getContestBySlug("devonshire-contest");
-            if contest_details != null){
+            if(contest_details != null){
                 renderContest("#contest_container", '#contest_template', contest_details);
             } else {
                 $("#no_contests").show()l;
