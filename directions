@@ -1,5 +1,5 @@
 <div class="jobs_banner text-center">
-    <h3>DRIVING DIRECTIONS</h3>
+    <h3>DRIVING DIRECTIONS & PARKING</h3>
     <p>explore • enjoy • shop</p>
 </div>
 <div class="store_list_head main_container">
@@ -10,19 +10,11 @@
         <div class="col-md-6">
             <h5 class="active_heading">DRIVING DIRECTIONS & PARKING</h5>
         </div>
-        <!--<div class="col-md-3">-->
-        <!--    <h5><a href="/area_map">AREA MAP</a></h5>-->
-        <!--</div>-->
-        <!--<div class="col-md-3">-->
-        <!--    <h5><a href="/public_transit">PUBLIC TRANSIT</a></h5>-->
-        <!--</div>-->
     </div>
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/tourism">Tourism Info Centre</option>
-            <!--<option value="/area_map">Area Map</option>-->
-            <!--<option value="/public_transit">Public Transit</option>-->
         </select>
     </h5>
 </div>
