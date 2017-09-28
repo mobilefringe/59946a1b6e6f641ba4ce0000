@@ -251,7 +251,7 @@
                         </div>
                     </div>
                     <div class="row footer_site_map">
-                        <div class="col-xs-12">
+                        <div class="col-md-6 col-xs-6">
                             <ul>
                                 <li><a href="https://devonshire.mallmaverick.com/retail_users/sign_in">Retailer Log-In</a></li>
                             </ul>
