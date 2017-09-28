@@ -237,17 +237,23 @@
                             <ul>
                                 <li><a href="/stores">Directory</a></li>
                                 <li><a href="/map">Centre Map</a></li>
-                                <li class="news_link"><a href="/news">The Latest</a></li>
                                 <li><a href="/promotions">Promotions</a></li>
                                 <li><a href="/events">Events</a></li>
                             </ul>
                         </div>
                         <div class="col-md-6 col-xs-6">
                             <ul>
-                                <li><a href="/services">Mall Services</a></li>
-                                <li><a href="/hours">Shopping Hours</a></li>
+                                <li><a href="/guest_services">Guest Services</a></li>
+                                <li><a href="/hours">Hours</a></li>
                                 <li><a href="/contact_us">Contact Us</a></li>
                                 <li><a href="/jobs">Jobs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row footer_site_map">
+                        <div class="col-xs-12">
+                            <ul>
+                                <li><a href="https://devonshire.mallmaverick.com/retail_users/sign_in">Retailer Log-In</a></li>
                             </ul>
                         </div>
                     </div>
