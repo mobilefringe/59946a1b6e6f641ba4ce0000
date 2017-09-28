@@ -9,31 +9,31 @@
     </a>
     <i class="fa fa-remove close_popup"></i>
 </div>
-<!--<div class="home_banner">-->
-<!--    <div class="flexslider text-center">-->
-<!--        <ul class="slides" id="home_banner">-->
-<!--            <script id="banner_template" type="x-tmpl-mustache/text">-->
-<!--                <li class="position_relative">-->
-<!--                    <a href="{{url}}" {{css}} onclick="{{noLink}}">-->
+<div class="home_banner">
+    <div class="flexslider text-center">
+        <ul class="slides" id="home_banner">
+            <script id="banner_template" type="x-tmpl-mustache/text">
+                <li class="position_relative">
+                    <a href="{{url}}" {{css}} onclick="{{noLink}}">
                        
-<!--                        <div class="hero_banner" style="background-image: url({{image_url}})"></div>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--            </script>-->
-<!--        </ul>-->
-<!--    </div>-->
-<!--    <div class="banner_wrapper text-center">-->
-<!--        <h3>EXPERIENCE THE LUXURY</h3>-->
-<!--        <p>Your Premier Shopping Destination</p>-->
-<!--        <a class="animated_btn" href="/stores">Visit Our Stores</a>-->
-<!--    </div>-->
-<!--</div>-->
+                        <div class="hero_banner" style="background-image: url({{image_url}})"></div>
+                    </a>
+                </li>
+            </script>
+        </ul>
+    </div>
+    <div class="banner_wrapper text-center">
+        <h3>EXPERIENCE THE LUXURY</h3>
+        <p>Your Premier Shopping Destination</p>
+        <a class="animated_btn" href="/stores">Visit Our Stores</a>
+    </div>
+</div>
 
-<div class="hero_banner text-center">
-    <h3>Flirty or Fierce</h3>
+<!--<div class="hero_banner text-center">-->
+<!--    <h3>Flirty or Fierce</h3>-->
     <!--<p>We Know You!</p>-->
     <!--<a class="animated_btn" href="/stores">visit our stores</a>-->
-</div>
+<!--</div>-->
 <div class="content_container main_container">
     <div class="feature_items_box mobile_padding">
         <div class="feature_row">
@@ -105,6 +105,9 @@
     $(document).ready(function(e){
         init(e);
         function renderAll(){
+            var banners = getBanners();
+            renderBanner('#banner_template','#home_banner',banners);
+            
             loadSocialFeeds(render_social)
             renderFeatureItems();
             var today_hours = getTodaysHours();
