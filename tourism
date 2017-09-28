@@ -20,9 +20,9 @@
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
-            <option value="/directions">Driving Directions</option>
-            <option value="/area_map">Area Map</option>
-            <option value="/public_transit">Public Transit</option>
+            <option value="/directions">Driving Directions & Parking</option>
+            <!--<option value="/area_map">Area Map</option>-->
+            <!--<option value="/public_transit">Public Transit</option>-->
         </select>
     </h5>
 </div>
