@@ -44,12 +44,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 margin_30">
-                        
                             <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
                         </div>
                     </div>
-                    
-                    <button id="submit" class="newsletter_btn animated_btn" type="submit">SUBMIT</button>
+                    <div class="row">
+                        <div class="col-md-12 margin_30">
+                            <button id="submit" class="newsletter_btn animated_btn" type="submit">SUBMIT</button>
+                        </div>
+                    </div>
                 </form>
                 <br>
                 <div id="send_contact_success" class="alert alert-success hidden_now" role="alert">
