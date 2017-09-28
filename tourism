@@ -4,18 +4,18 @@
 </div>
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
-        <div class="col-md-3">
-            <h5 class="active_heading">TOURISM</h5>
+        <div class="col-md-6">
+            <h5 class="active_heading">TOURISM INFO CENTRE</h5>
         </div>
-        <div class="col-md-3">
-            <h5><a href="/directions">DIRECTIONS</a></h5>
+        <div class="col-md-6">
+            <h5><a href="/directions">DRIVING DIRECTIONS & PARKING</a></h5>
         </div>
-        <div class="col-md-3">
-            <h5><a href="/area_map">AREA MAP</a></h5>
-        </div>
-        <div class="col-md-3">
-            <h5><a href="/public_transit">PUBLIC TRANSIT</a></h5>
-        </div>
+        <!--<div class="col-md-3">-->
+        <!--    <h5><a href="/area_map">AREA MAP</a></h5>-->
+        <!--</div>-->
+        <!--<div class="col-md-3">-->
+        <!--    <h5><a href="/public_transit">PUBLIC TRANSIT</a></h5>-->
+        <!--</div>-->
     </div>
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
