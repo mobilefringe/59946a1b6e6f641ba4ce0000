@@ -121,9 +121,7 @@
                     </a>
                     <ul class="sub_menu hidden_now">
 						<li><a href="/tourism">Tourism Info Centre</a></li>
-						<li><a href="/directions">Driving Directions & PARKING</a></li>
-						<!--<li><a href="/area_map" target="_blank">Map of the Area</a></li>-->
-						<!--<li><a href="/public_transit" target="_blank">Public Transit</a></li>-->
+						<li><a href="/directions">Directions & Parking</a></li>
 					</ul>
                 </li>
                 <li>
