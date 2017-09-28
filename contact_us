@@ -105,8 +105,8 @@
                         
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
-                        $('#send_contact_error').fadeIn();
                         $('html, body').animate({scrollTop : 0},800);
+                        $('#send_contact_error').fadeIn();
                     }
                 });
     		});
