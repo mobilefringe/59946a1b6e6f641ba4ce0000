@@ -91,8 +91,9 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
+                        <li><a href="/promotions">Promotions</a></li>
                         <li><a href="/events">Events</a></li>
-						<li><a href="/promotions">Promotions</a></li>
+						<li><a href="/contests">Contest</a></li>
 					</ul>
                 </li>
                 <li>
@@ -102,7 +103,7 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-                        <li><a href="/services">Services & Amenities</a></li>
+                        <li><a href="/guest_services">Guest Services</a></li>
                         <li><a href="/green_initiatives">Green Initiatives</a></li>
                         <li><a href="/parking">Parking</a></li>
 					</ul>
