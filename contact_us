@@ -68,7 +68,7 @@
                 <div id="mm_page_content"></div>
             </div>
             <div class="col-md-4">
-                
+                <div id="mm_page_content_contact"></div>
             </div>
         </div>
     </div>
@@ -83,7 +83,6 @@
             prefix = get_prefix();
             var pages_json = prefix + "/pages/devonshire-contact-us.json"
             $.getJSON(pages_json).done(function(data) {
-                $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
@@ -92,7 +91,6 @@
             }); 
             var contact_json = prefix + "/pages/devonshire-contact-info.json"
             $.getJSON(pages_json).done(function(data) {
-                $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content_contact').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
