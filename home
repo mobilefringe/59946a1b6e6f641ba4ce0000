@@ -23,17 +23,9 @@
         </ul>
     </div>
     <div class="banner_wrapper text-center">
-        <h3>EXPERIENCE THE LUXURY</h3>
-        <p>Your Premier Shopping Destination</p>
-        <a class="animated_btn" href="/stores">Visit Our Stores</a>
+        <h3>Flirty or Fierce</h3>
     </div>
 </div>
-
-<!--<div class="hero_banner text-center">-->
-<!--    <h3>Flirty or Fierce</h3>-->
-    <!--<p>We Know You!</p>-->
-    <!--<a class="animated_btn" href="/stores">visit our stores</a>-->
-<!--</div>-->
 <div class="content_container main_container">
     <div class="feature_items_box mobile_padding">
         <div class="feature_row">
