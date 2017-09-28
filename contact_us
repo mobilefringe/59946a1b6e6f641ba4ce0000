@@ -90,7 +90,7 @@
                 }
             }); 
             var contact_json = prefix + "/pages/devonshire-contact-info.json"
-            $.getJSON(pages_json).done(function(data) {
+            $.getJSON(contact_json).done(function(data) {
                 $('#mm_page_content_contact').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
