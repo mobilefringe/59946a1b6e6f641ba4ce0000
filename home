@@ -1,9 +1,34 @@
+<style>
+    .flexslider {
+        z-index: -9;
+    }
+</style>
 <div class="popup_home hidden_now">
-    <a href="#" target="_blank">
+    <a href="#">
         <img src="#" alt="pop up" />
     </a>
     <i class="fa fa-remove close_popup"></i>
 </div>
+<!--<div class="home_banner">-->
+<!--    <div class="flexslider text-center">-->
+<!--        <ul class="slides" id="home_banner">-->
+<!--            <script id="banner_template" type="x-tmpl-mustache/text">-->
+<!--                <li class="position_relative">-->
+<!--                    <a href="{{url}}" {{css}} onclick="{{noLink}}">-->
+                       
+<!--                        <div class="hero_banner" style="background-image: url({{image_url}})"></div>-->
+<!--                    </a>-->
+<!--                </li>-->
+<!--            </script>-->
+<!--        </ul>-->
+<!--    </div>-->
+<!--    <div class="banner_wrapper text-center">-->
+<!--        <h3>EXPERIENCE THE LUXURY</h3>-->
+<!--        <p>Your Premier Shopping Destination</p>-->
+<!--        <a class="animated_btn" href="/stores">Visit Our Stores</a>-->
+<!--    </div>-->
+<!--</div>-->
+
 <div class="hero_banner text-center">
     <h3>Flirty or Fierce</h3>
     <!--<p>We Know You!</p>-->
