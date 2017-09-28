@@ -101,9 +101,11 @@
                     success: function(data, textStatus, jqXHR) {
                         $('#send_contact_success').fadeIn();
                         $('#contact_form').find("input[type=text], textarea").val("");
+                        $('html, body').animate({scrollTop : 0},800);
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         $('#send_contact_error').fadeIn();
+                        $('html, body').animate({scrollTop : 0},800);
                     }
                 });
     		});
