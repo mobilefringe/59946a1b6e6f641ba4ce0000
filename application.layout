@@ -82,7 +82,6 @@
 						<li><a href="/stores">Directory</a></li>
 						<li><a href="/map">Centre Map</a></li>
 					</ul>
-                        
                 </li>
                 <li><a href="/promotions">PROMOTIONS</a></li>
                 <li><a href="/events">EVENTS</a></li>
@@ -108,9 +107,9 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-                        <li><a href="/hours">Shopping Hours</a></li>
+                        <li><a href="/hours">Hours & Directions</a></li>
                         <li><a href="/jobs" target="_blank">Jobs</a></li>
-						<li><a href="/community_partners">Community Partners</a></li>
+						<li><a href="/community">Partners & Non-Profit</a></li>
 						<li><a href="/green_initiatives">Green Initiatives</a></li>
 					</ul>
                 </li>
