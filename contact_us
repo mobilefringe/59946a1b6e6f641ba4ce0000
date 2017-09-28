@@ -100,9 +100,10 @@
                     data : {authenticity_token: '<%=form_authenticity_token%>' ,
                     form_data:values},
                     success: function(data, textStatus, jqXHR) {
+                        $('html, body').animate({scrollTop : 0}, 800);
                         $('#send_contact_success').fadeIn();
                         $('#contact_form').find("input[type=text], textarea").val("");
-                        $('html, body').animate({scrollTop : 0},800);
+                        
                     },
                     error: function (jqXHR, textStatus, errorThrown) {
                         $('#send_contact_error').fadeIn();
