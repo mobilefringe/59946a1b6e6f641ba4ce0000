@@ -111,15 +111,15 @@
                 </li>
                 <li>
                     <a href="#" class="submenu_expander">
-                        INFORMATION
+                        MALL INFO
                         <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;">
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-						<li><a href="/green_initiatives">Green Initiatives</a></li>
+                        <li><a href="/hours">Shopping Hours</a></li>
+                        <li><a href="/jobs" target="_blank">Jobs</a></li>
 						<li><a href="/community_partners">Community Partners</a></li>
-						<li><a href="/charities" target="_blank">Charities & Non-Profit</a></li>
-						<li><a href="/jobs" target="_blank">Jobs</a></li>
+						<li><a href="/green_initiatives">Green Initiatives</a></li>
 					</ul>
                 </li>
                 <li>
@@ -130,9 +130,9 @@
                     </a>
                     <ul class="sub_menu hidden_now">
 						<li><a href="/tourism">Tourism Info Centre</a></li>
-						<li><a href="/directions">Driving Directions</a></li>
-						<li><a href="/area_map" target="_blank">Map of the Area</a></li>
-						<li><a href="/public_transit" target="_blank">Public Transit</a></li>
+						<li><a href="/directions">Driving Directions & PARKING</a></li>
+						<!--<li><a href="/area_map" target="_blank">Map of the Area</a></li>-->
+						<!--<li><a href="/public_transit" target="_blank">Public Transit</a></li>-->
 					</ul>
                 </li>
                 <li>
@@ -142,7 +142,7 @@
 						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
                     </a>
                     <ul class="sub_menu hidden_now">
-                        <li><a href="/hours">Shopping Hours</a></li>
+                        
 						<li><a href="/contact_us">Contact Us</a></li>
 						<li><a href="/leasing">Leasing</a></li>
 						<li><a href="/security">Security</a></li>
