@@ -27,7 +27,7 @@
     <div class="margin_25_across">
         <div class="row">
             <div class="col-md-12">
-                <h4 class="center caps margin_30">Contact Us for Questions, Comments, and more Information</h4>
+                <h2 class="margin_30">Welcome to Devonshire Mall</h4>
                 <form name="contact_form" id="contact_form" method="post">
                     <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
                     <input name="email" id="email" class="form-control" type="text" value="" placeholder="Your Email" required>
