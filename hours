@@ -10,10 +10,10 @@
         <!--<div class="col-md-3">-->
         <!--    <h5><a href="/jobs">JOBS</a></h5>-->
         <!--</div>-->
-        <div class="col-md-3" style="padding: 0">
+        <div class="col-md-4" style="padding: 0">
             <h5><a href="/community">PARTNERS & NON-PROFIT</a></h5>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h5><a href="/green_initiatives">GREEN INITIATIVES</a></h5>
         </div>
     </div>
