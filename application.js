@@ -37,13 +37,22 @@ function renderContest(container, template, collection){
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    console.log(collection.photo_url)
-    collection.image_url = "https://www.mallmaverick.com" + collection.photo_url;
-    collection.property_name = getPropertyDetails().name;
-    var rendered = Mustache.render(template_html,collection);
-    item_rendered.push(rendered);
+    $.each( collection , function( key, val){
+        val.image_url = "https://www.mallmaverick.com" + val.photo_url;
+        val.property_name = getPropertyDetails().name;
+    })
+    // console.log(collection.photo_url)
+    // collection.image_url = "https://www.mallmaverick.com" + collection.photo_url;
+    // collection.property_name = getPropertyDetails().name;
+    // var rendered = Mustache.render(template_html,collection);
+    // item_rendered.push(rendered);
     
-    $(container).show();
+    // $(container).show();
+    // $(container).html(item_rendered.join(''));
+    
+    var rendered = Mustache.render(template_html,val);
+        item_rendered.push(rendered);
+    });
     $(container).html(item_rendered.join(''));
 }
         
