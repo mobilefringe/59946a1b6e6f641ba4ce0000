@@ -40,7 +40,7 @@ function renderContest(container, template, collection){
     $.each( collection , function( key, val){
         val.image_url = "https://www.mallmaverick.com" + val.photo_url;
         val.property_name = getPropertyDetails().name;
-    })
+    
     // console.log(collection.photo_url)
     // collection.image_url = "https://www.mallmaverick.com" + collection.photo_url;
     // collection.property_name = getPropertyDetails().name;
