@@ -119,6 +119,7 @@
                 if(val.show_on_slug === "devonshire-monthly-contest") {
                     current_contest.push(val);
                 } 
+                var slug = current_contest.slug
             });
             renderContest("#contest_container", '#contest_template', current_contest);
 
