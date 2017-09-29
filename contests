@@ -120,6 +120,7 @@
                     current_contest.push(val);
                 } 
                 var slug = current_contest.slug
+                console.log(slug)
             });
             renderContest("#contest_container", '#contest_template', current_contest);
 
