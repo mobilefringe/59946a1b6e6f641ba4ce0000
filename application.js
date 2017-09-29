@@ -468,7 +468,7 @@ function renderPromoDetails(container, template, collection, centre){
             val.store_name = store_details.name;
             
             if (store_details.store_front_url_abs.indexOf('missing.png') > 0){
-                val.image_url  = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg"
+                val.store_image  = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg"
             } else {
                 val.store_image = store_details.store_front_url_abs;
             }
