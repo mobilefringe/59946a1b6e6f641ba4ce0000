@@ -5,7 +5,7 @@
 </style>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
 <div class="main_banner text-center">
-    <h3>CONTEST</h3>
+    <h3>CONTESTS</h3>
     <p>explore • enjoy • shop</p>
 </div>
 <div class="store_list_head main_container">
@@ -17,7 +17,7 @@
             <h5><a href="/events">EVENTS</a></h5>
         </div>
         <div class="col-md-4">
-            <h5 class="active_heading">CONTEST</h5>
+            <h5 class="active_heading">CONTESTS</h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
