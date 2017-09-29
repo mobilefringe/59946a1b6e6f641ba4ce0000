@@ -42,7 +42,7 @@
                         <div class="promo-details">
                             <p class="hidden_now" id="succes_msg">Thank you! Your entry has been received.</p>
                             <div class="event-image">
-                                <img class="contest banner" src="{{alt_photo_url}}">
+                                <img class="contest banner" src="{{photo_url}}">
                             </div>
                             <br>
                             <div class="event-description">
