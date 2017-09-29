@@ -120,6 +120,7 @@
                     current_contest.push(val);
                 } 
             });
+            console.log(current_contest)
             renderContest("#contest_container", '#contest_template', current_contest);
             
             // var contest_details = getContestBySlug("devonshire-contest");
