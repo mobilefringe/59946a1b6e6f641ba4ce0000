@@ -4,16 +4,16 @@
 </div>
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h5><a href="/hours">HOURS</a></h5>
         </div>
-        <div class="col-md-3">
-            <h5><a href="/jobs">JOBS</a></h5>
-        </div>
-        <div class="col-md-3">
+        <!--<div class="col-md-3">-->
+        <!--    <h5><a href="/jobs">JOBS</a></h5>-->
+        <!--</div>-->
+        <div class="col-md-4">
             <h5 class="active_heading">PARTNERS & NON-PROFIT</h5>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h5><a href="/green_initiatives">GREEN INITIATIVES</a></h5>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/hours">Hours</option>
-            <option value="/jobs">Jobs</option>
+            <!--<option value="/jobs">Jobs</option>-->
             <option value="/green_initiatives">Green Initiatives</option>
         </select>
     </h5>
