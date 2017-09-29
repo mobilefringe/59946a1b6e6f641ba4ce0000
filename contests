@@ -121,10 +121,10 @@
                 } 
             });
             console.log(current_contest)
-            var slug = "";
-            $.each(current_contests, function(key, val){
+            // var slug = "";
+            // $.each(current_contests, function(key, val){
                 
-            });
+            // });
             renderContest("#contest_container", '#contest_template', current_contest);
 
             show_content();
