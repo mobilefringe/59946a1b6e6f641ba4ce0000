@@ -67,8 +67,11 @@
                 
             </div>
         </div>
+        <hr>
         <div class="row">
-            
+            <div class="col-md-12">
+                <div id="mm_page_content"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -85,7 +88,7 @@
             prefix = get_prefix();
             var pages_json = prefix + "/pages/devonshire-directions.json"
             $.getJSON(pages_json).done(function(data) {
-                $('#mm_page_content_directions').html(data.body);
+                $('#mm_page_content').html(data.body);
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
                     $("#404_msg").fadeIn("fast");
