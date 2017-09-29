@@ -67,6 +67,9 @@
                 
             </div>
         </div>
+        <div class="row">
+            
+        </div>
     </div>
 </div>
 <script>
@@ -78,6 +81,17 @@
             var holiday_hours = getPropertyHolidayHours().sortBy(function(o){ return o.holiday_date });
             renderHours('#holidays_hours_container','#holidays_hours_template', holiday_hours, 'holiday_hours');
             renderHours('#closed_hours_container','#closed_hours_template', holiday_hours, 'closed_hours');
+
+            prefix = get_prefix();
+            var pages_json = prefix + "/pages/devonshire-directions.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content_directions').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+
             show_content();
         }
         loadMallDataCached(renderAll); 
