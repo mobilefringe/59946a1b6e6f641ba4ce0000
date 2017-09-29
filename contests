@@ -119,8 +119,11 @@
                 if(val.show_on_slug === "devonshire-monthly-contest") {
                     current_contest.push(val);
                 } 
-                var slug = current_contest.slug
-                console.log(slug)
+            });
+            console.log(current_contest)
+            var slug = "";
+            $.each(current_contests, function(key, val){
+                
             });
             renderContest("#contest_container", '#contest_template', current_contest);
 
