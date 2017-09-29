@@ -4,16 +4,16 @@
 </div>
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h5><a href="/hours">HOURS</a></h5>
         </div>
-        <div class="col-md-3">
-            <h5><a href="/jobs">JOBS</a></h5>
-        </div>
-        <div class="col-md-3">
+        <!--<div class="col-md-3">-->
+        <!--    <h5><a href="/jobs">JOBS</a></h5>-->
+        <!--</div>-->
+        <div class="col-md-4" style="padding: 0">
             <h5><a href="/community">PARTNERS & NON-PROFIT</a></h5>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-4">
             <h5 class="active_heading">GREEN INITIATIVES</h5>
         </div>
     </div>
