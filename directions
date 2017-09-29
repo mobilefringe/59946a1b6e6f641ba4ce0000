@@ -38,7 +38,7 @@
             var pathArray = window.location.pathname.split( '/' );
             var slug = pathArray[pathArray.length-1];
             prefix = get_prefix();
-            var directions_json = prefix + "/pages/devonshire-directions.json"
+            var directions_json = prefix + "/pages/devonshire-tourism-directions.json"
             var parking_json = prefix + "/pages/devonshire-parking.json"
             $.getJSON(directions_json).done(function(data) {
                 $('#mm_page_content_directions').html(data.body);
