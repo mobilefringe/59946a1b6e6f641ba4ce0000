@@ -37,7 +37,7 @@ function renderContest(container, template, collection){
     var item_rendered = [];
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
-    console.log(collection)
+    console.log(collection.photo_url)
     collection.image_url = "https://www.mallmaverick.com" + collection.photo_url;
     collection.property_name = getPropertyDetails().name;
     var rendered = Mustache.render(template_html,collection);
