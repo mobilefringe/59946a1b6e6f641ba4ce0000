@@ -13,7 +13,7 @@
         <div class="col-md-3" style="padding: 0">
             <h5><a href="/community">NON-PROFIT</a></h5>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3" style="padding: 0;">
             <h5 class="active_heading">GREEN INITIATIVES</h5>
         </div>
     </div>
