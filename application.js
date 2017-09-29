@@ -163,7 +163,7 @@ function renderGallery(container, template, collection){
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val ) {
         if (val.photo_url.indexOf('missing.png') > -1) {
-            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+            val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg";
         } else {
             val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
         }
