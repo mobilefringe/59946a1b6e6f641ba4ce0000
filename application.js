@@ -433,11 +433,7 @@ function renderPromotions(container, template, collection, centre){
             val.store_slug = "/"
             val.store_show = "display:none;";
         }
-        
-        // if (val.image_url.indexOf('missing.png') > 0){
-        //     val.image_url  = "";
-        // }
-        
+
         if (val.description.length > 200){
             val.description_short = val.description.substring(0,200) + "...";
         } else {
@@ -471,6 +467,9 @@ function renderPromoDetails(container, template, collection, centre){
             val.store_detail_btn = store_details.slug ;
             val.store_name = store_details.name;
             val.store_image = store_details.store_front_url_abs;
+            if (store_details.store_front_url_abs.indexOf('missing.png') > 0){
+                val.image_url  = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg"
+            }
             val.store_slug = store_details.slug
             val.store_show = "display:block";
             if (store_details.website != null && store_details.website.length > 0){
@@ -488,7 +487,7 @@ function renderPromoDetails(container, template, collection, centre){
             }
         } else {
             val.store_name = mall_name;
-            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1502995441000/default.png";
+            val.store_image = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg";
             val.store_show = "display:none";
             val.phone_show = "display:none";
             val.show = "display:none";
