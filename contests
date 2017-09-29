@@ -120,7 +120,8 @@
                     current_contest.push(val);
                 } 
             });
-            console.log(current_contest)
+            var slug = current_contest[0].slug
+            console.log(slug)
             // var slug = "";
             // $.each(current_contests, function(key, val){
                 
