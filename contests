@@ -62,19 +62,19 @@
         function renderAll (){
             var events = getEventsList().sortBy(function(o){ return o.end_date });
             console.log(events)
-            var published_promos = [];
-            $.each( promotions , function( key, val ){
-                today = moment();
-                webDate = moment(val.show_on_web_date);
-                if (today >= webDate) {
-                    published_promos.push(val)
-                } 
-            });
-            if(published_promos.length > 0){
-                renderEvents("#promos_container","#promos_template", published_promos, "Devonshire Mall");
-            } else {
-                $('#no_promos').show()
-            }
+            // var published_promos = [];
+            // $.each( promotions , function( key, val ){
+            //     today = moment();
+            //     webDate = moment(val.show_on_web_date);
+            //     if (today >= webDate) {
+            //         published_promos.push(val)
+            //     } 
+            // });
+            // if(published_promos.length > 0){
+            //     renderEvents("#promos_container","#promos_template", published_promos, "Devonshire Mall");
+            // } else {
+            //     $('#no_promos').show()
+            // }
             show_content();
         }
 		loadMallDataCached(renderAll); 
