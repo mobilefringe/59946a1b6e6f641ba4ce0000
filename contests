@@ -75,7 +75,7 @@
             if(published_contests.length > 0){
                 renderEvents("#promos_container","#promos_template", published_contests, "Devonshire Mall");
             } else {
-                $('#no_promos').show()
+                $('#no_contests').show()
             }
             show_content();
         }
