@@ -57,32 +57,30 @@
     </div>
 </div>
 <script>
-    $(document).ready(function(e) {
+    $(document).ready(function(e){
         init(e);
-        function renderPageData(){
-            var contests = getContestList();
-            var current_contest = [];
-            $.each(contests, function(key, val){
-                if(val.show_on_slug === "devonshire-monthly-contest") {
-                    current_contest.push(val);
+        function renderAll (){
+            var promotions = getEventsList().sortBy(function(o){ return o.end_date });
+            var categories = getStoreCategories();
+            renderGeneral('#category_container', '#category_template', categories);
+            renderGeneral('#mobile_cat_list', '#category_template2', categories);
+            $('#mobile_cat_list').prepend('<option value="all" selected >All Categories</option>');
+            show_cat_stores()
+            var published_promos = [];
+            $.each( promotions , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    published_promos.push(val)
                 } 
             });
-            var slug = current_contest[0].slug;
-
-            renderContest("#contest_container", '#contest_template', current_contest);
-
+            if(published_promos.length > 0){
+                renderEvents("#promos_container","#promos_template", published_promos, "Devonshire Mall");
+            } else {
+                $('#no_promos').show()
+            }
             show_content();
-            
-            $.validate();
-            
-            $('#contest_form').submit(function(e){
-                e.preventDefault();
-                $('.contest_btn').prop('disabled', true);
-                console.log(slug)
-                submit_contest(slug);
-                $('html, body').animate({scrollTop : 0},800);
-            });
         }
-        loadMallDataCached(renderPageData);
-    });
+		loadMallDataCached(renderAll); 
+    })
 </script>
