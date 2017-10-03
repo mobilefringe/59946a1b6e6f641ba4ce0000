@@ -73,7 +73,7 @@
                     } 
                 }
             });
-            if(published_contests.length > 0){
+            if(published_contests.length > 10){
                 renderEvents("#promos_container","#promos_template", published_contests, "Devonshire Mall");
             } else {
                 $('#no_contests').show()
