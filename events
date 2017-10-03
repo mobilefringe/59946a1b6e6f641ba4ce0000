@@ -26,6 +26,7 @@
     <div class="margin_25_across">
         <div class="row">
             <div class="col-md-12">
+                <p class="hidden_now" id="no_events">Sorry, there are no events at this time. Please check back soon.</p>
                 <div id="promos_container">
                     <script id="promos_template" type="x-tmpl-mustache/text">
                         <div class="row promo_item cats_row" data-cat="{{cat_list}}">
@@ -72,7 +73,7 @@
             if(published_events.length > 0){
                 renderEvents("#promos_container","#promos_template", published_events, "Devonshire Mall");
             } else {
-                $('#no_promos').show()
+                $('#no_events').show()
             }
             show_content();
         }
