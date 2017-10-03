@@ -56,7 +56,6 @@
         init(e);
         function renderAll (){
             var events = getEventsList().sortBy(function(o){ return o.end_date });
-            console.log(events)
             var published_contests = [];
             $.each( events , function( key, val ){
                 if(val.tags == "contests"){
