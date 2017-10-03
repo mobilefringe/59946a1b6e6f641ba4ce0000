@@ -64,11 +64,13 @@
             // show_cat_stores()
             var published_events = [];
             $.each( events , function( key, val ){
-                today = moment();
-                webDate = moment(val.show_on_web_date);
-                if (today >= webDate) {
-                    published_events.push(val)
-                } 
+                if(val.tags != "contests"){
+                    today = moment();
+                    webDate = moment(val.show_on_web_date);
+                    if (today >= webDate) {
+                        published_events.push(val)
+                    } 
+                }
             });
             if(published_events.length > 0){
                 renderEvents("#promos_container","#promos_template", published_events, "Devonshire Mall");
