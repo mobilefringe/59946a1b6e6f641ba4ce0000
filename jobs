@@ -5,7 +5,7 @@
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
         <div class="col-md-3">
-            <h5><a href="/hours">HOURS & DIRECTIONS</a></h5>
+            <h5><a href="/hours">HOURS</a></h5>
         </div>
         <div class="col-md-3">
             <h5 class="active_heading">JOBS</h5>
@@ -20,7 +20,7 @@
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
-            <option value="/hours">Hours & Directions</option>
+            <option value="/hours">Hours</option>
             <option value="/community">Non-Profit</option>
             <option value="/green_initiatives">Green Initiatives</option>
         </select>
