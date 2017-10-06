@@ -86,6 +86,7 @@
         var blog = getBlogDataBySlug('devonshire-trending').posts
         console.log(blog)
         var blog_posts = blog.sortBy(function(o){ return o.publish_date}).reverse();
+         console.log(blog_posts)
         // var blog_posts = getBlogDataBySlug('devonshire-trending').posts.reverse();;
         var main_post = blog_posts[0];
         renderSinglePost('#main_post_container', "#main_post_template", main_post);
