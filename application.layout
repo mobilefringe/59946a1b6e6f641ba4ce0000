@@ -49,7 +49,7 @@
     
     <script>
         setEndPoint('//devonshire.mallmaverick.com/api/v4/devonshire/all.json');
-        setSocialEndPoint('//devonshire.mallmaverick.com/api/v2/devonshire/social.json')
+        setSocialEndPoint('//devonshire.mallmaverick.com/api/v3/devonshire/social.json')
     </script>
     
      <script>
