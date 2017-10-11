@@ -70,7 +70,8 @@
         <hr>
         <div class="row">
             <div class="col-md-12">
-                <p><a href="/directions">Click here</a> for directions.</p>
+                <div id="mm_page_content"></div>
+                <!--<p><a href="/directions">Click here</a> for directions.</p>-->
             </div>
         </div>
     </div>
@@ -84,7 +85,17 @@
             var holiday_hours = getPropertyHolidayHours().sortBy(function(o){ return o.holiday_date });
             renderHours('#holidays_hours_container','#holidays_hours_template', holiday_hours, 'holiday_hours');
             renderHours('#closed_hours_container','#closed_hours_template', holiday_hours, 'closed_hours');
-
+            
+            var prefix = get_prefix();
+            var pages_json = prefix + "/pages/devonshire-extra-hours.json"
+            $.getJSON(pages_json).done(function(data) {
+                $('#mm_page_content').html(data.body);
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            }); 
+            
             show_content();
         }
         loadMallDataCached(renderAll); 
