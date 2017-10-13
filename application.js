@@ -59,7 +59,9 @@ function renderEvents(container, template, collection, centre){
             val.store_detail_btn = store_details.slug ;
             val.store_name = store_details.name;
             val.image_url = store_details.store_front_url_abs;
-            val.cat_list = store_details.categories.join(',')
+            if(store_details.categories != null){    
+                val.cat_list = store_details.categories.join(',')
+            }
         } else {
             val.store_name = centre;
             val.image_url = "//codecloud.cdn.speedyrails.net/sites/56c740936e6f642d56000000/image/png/1456246178000/promo_image.png";
