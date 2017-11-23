@@ -1,7 +1,7 @@
 <style>
     .flexslider {
         border-radius: 0;
-        z-index: -9;
+        /*z-index: -9;*/
     }
 </style>
 <div class="popup_home hidden_now">
