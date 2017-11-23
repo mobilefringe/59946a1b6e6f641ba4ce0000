@@ -36,7 +36,8 @@
             </div>
             
             <div class="feature_item">
-                <!--<div id="feature_2" class="position_relative"></div>-->
+                <div id="feature_2" class="position_relative"></div>
+                <div id="feature_3" class="position_relative"></div>
                 <div>
                     
                     <div class="social_box hidden_phone text-center" id="social_twitter">
@@ -51,8 +52,8 @@
                     </div>
                     <a class="show_phone" href="https://twitter.com/devonshiremall" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/png/1506454448000/Twitter Devon.png"  alt=""></a>
                 </div>
-                <div id="feature_2" class="position_relative"></div>
-                <div id="feature_3" class="position_relative"></div>
+                <!--<div id="feature_2" class="position_relative"></div>-->
+                <!--<div id="feature_3" class="position_relative"></div>-->
             </div>
             
             <div class="feature_item">
