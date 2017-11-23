@@ -31,9 +31,7 @@
             </div>
             
             <div class="feature_item">
-                <!--<div id="feature_2" class="position_relative"></div>-->
-                <!--<div id="feature_3" class="position_relative"></div>-->
-                <div class="feature_container">
+                <div>
                     <a class="show_phone" href="https://twitter.com/devonshiremall" target="_blank"><img src="//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/png/1506454448000/Twitter Devon.png"  alt=""></a>
                     <div class="social_box hidden_phone text-center" id="social_twitter">
                         <img src="//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1463434698000/tweet.png" class="" alt="tweet">
@@ -67,7 +65,7 @@
             </div>
             
             <div class="feature_item">
-                <div class="feature_container">
+                <div>
                     <a href="/hours" class="show_phone">
                         <img src="//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/jpeg/1464118541000/hsc_hours.jpg" class="" alt="hours">
                     </a>
