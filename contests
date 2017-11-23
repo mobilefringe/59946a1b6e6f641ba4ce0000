@@ -21,10 +21,10 @@
             <h5><a href="/pages/devonshire-black-friday-deals">BLACK FRIDAY</a></h5>
         </div>
         <div class="col-md-3">
-            <h5 class="active_heading">EVENTS</h5>
+            <h5><a href="/events">EVENTS</h5>
         </div>
         <div class="col-md-3">
-            <h5><a href="/contests">CONTESTS</a></h5>
+            <h5  class="active_heading">CONTESTS</a></h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
