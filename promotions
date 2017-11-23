@@ -8,7 +8,7 @@
             <h5 class="active_heading">PROMOTIONS</h5>
         </div>
         <div class="col-md-3">
-            <h5 class="active_heading">BLACK FRIDAY</h5>
+            <h5><a href="/pages/devonshire-black-friday-deals">BLACK FRIDAY</a></h5>
         </div>
         <div class="col-md-3">
             <h5><a href="/events">EVENTS</a></h5>
@@ -20,6 +20,7 @@
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
+            <option value="/pages/devonshire-black-friday-deals">Black Friday</option>
             <option value="/events">Events</option>
             <option value="/contests">Contests</option>
         </select>
