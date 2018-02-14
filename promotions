@@ -19,7 +19,7 @@
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
-            <option value="/pages/devonshire-black-friday-deals">Black Friday</option> <!--Delete After Black Friday -->
+          
             <option value="/events">Events</option>
             <option value="/contests">Contests</option>
         </select>
