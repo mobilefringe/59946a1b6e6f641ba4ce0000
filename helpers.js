@@ -403,8 +403,7 @@ function renderInstaFeed(container, template){
         $.each(insta_feed, function(i,v){
             if(v.caption != null){
                 feed_obj.caption = v.caption.text
-            }
-            else{
+            } else {
                 feed_obj.caption = ""
             }
             feed_obj.image = v.images.low_resolution.url
