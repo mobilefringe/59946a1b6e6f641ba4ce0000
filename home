@@ -86,7 +86,11 @@
         </div>
     </div>
     <div class="instagram_container mobile_padding">
-        
+        <div id="insta_container" class="socialize_div">
+            <script id="insta_template" type="x-tmpl-mustache/text">
+                <a class="ig-image" target=_blank href="{{link}}" title="{{caption}}" ><img src="{{image}}" /></a>
+            </script>
+        </div>
     </div>
 </div>
 <style>
@@ -105,6 +109,9 @@
             renderFeatureItems();
             var today_hours = getTodaysHours();
             renderHomeHours('#home_hours_container2', '#home_hours_template2', today_hours)   
+            
+            renderInstaFeed('#insta_container', '#insta_template');
+            
             show_content();
             
             if($.cookie("popup_viewed") != "true"){
