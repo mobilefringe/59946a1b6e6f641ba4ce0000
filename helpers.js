@@ -408,7 +408,7 @@ function renderInstaFeed(container, template){
             }
             feed_obj.image = v.images.low_resolution.url
             feed_obj.link = v.link
-            if (i<6){
+            if (i < 4){
                 var ig_rendered = Mustache.render(template_html,feed_obj);
                 item_rendered.push(ig_rendered.trim());
             }
