@@ -86,6 +86,7 @@
         </div>
     </div>
     <div class="instagram_container mobile_padding">
+        <h5 class="">Our Feed</h5>
         <div id="insta_container" class="socialize_div">
             <script id="insta_template" type="x-tmpl-mustache/text">
                 <a class="ig-image" target=_blank href="{{link}}" title="{{caption}}">
