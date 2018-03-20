@@ -90,9 +90,9 @@
         <div id="insta_container" class="socialize_div">
             <script id="insta_template" type="x-tmpl-mustache/text">
                 <a href="{{link}}" target="_blank" title="{{caption}}">
-                    <div class="ig-image">
+                    <span class="ig-image">
                         <img src="{{image}}" />
-                    </div>
+                    </span>
                 </a>
             </script>
         </div>
