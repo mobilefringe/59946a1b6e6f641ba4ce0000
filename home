@@ -92,7 +92,7 @@
                 <a href="{{link}}" target="_blank" title="{{caption}}">
                     <div class="ig-image">
                         <img src="{{image}}" />
-                    </div
+                    </div>
                 </a>
             </script>
         </div>
