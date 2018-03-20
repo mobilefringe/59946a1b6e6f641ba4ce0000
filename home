@@ -89,11 +89,11 @@
         <h5 class="insta_title">Our Feed</h5>
         <div id="insta_container" class="socialize_div">
             <script id="insta_template" type="x-tmpl-mustache/text">
-                <a href="{{link}}" target="_blank" title="{{caption}}">
-                    <span class="ig-image">
+                <div class="ig-image">
+                    <a href="{{link}}" target="_blank" title="{{caption}}">
                         <img src="{{image}}" />
-                    </span>
-                </a>
+                    </a>
+                </div>
             </script>
         </div>
     </div>
