@@ -1,4 +1,4 @@
-<html lang="en">
+#2 <html lang="en">
 <head>
     <!--Update each web pages SEO to set values for {{meta_title}}, {{meta_description}}, {{meta_keywords}} -->
     <meta property="og:title" content="{{meta_title}}">
@@ -110,7 +110,7 @@
                         <li><a href="/hours">Hours</a></li>
                     	<li><a href="/jobs">Jobs</a></li>
 						<li><a href="/community">Partners & Non-Profit</a></li>
-						<li><a href="/green_initiatives">Green Initiatives</a></li>
+						<li><a href="/green_initiatives">Act Green Initiatives</a></li>
 					</ul>
                 </li>
                 <li>
