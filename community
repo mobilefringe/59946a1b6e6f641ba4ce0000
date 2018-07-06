@@ -14,7 +14,7 @@
             <h5 class="active_heading">NON-PROFIT</h5>
         </div>
         <div class="col-md-3" style="padding: 0">
-            <h5><a href="/green_initiatives">GREEN INITIATIVES</a></h5>
+            <h5><a href="/green_initiatives">ACT GREEN INITIATIVES</a></h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
@@ -22,7 +22,7 @@
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/hours">Hours</option>
             <option value="/jobs">Jobs</option>
-            <option value="/green_initiatives">Green Initiatives</option>
+            <option value="/green_initiatives">Act Green Initiatives</option>
         </select>
     </h5>
 </div>
