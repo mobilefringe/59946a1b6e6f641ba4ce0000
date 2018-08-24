@@ -189,6 +189,7 @@
                     </p>
                     <a href="/hours" class="holiday_hours_home soft_hidden_phone">Check for Holiday Hours</a>
                 </div>
+                <div class="col-md-4 col-sm-4 col-xs-4 show_phone"></div>
                 <div class="col-md-4 col-xs-8 text-center">
                     <a href="/">
                         <img src="//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/png/1505847065000/logo_devMall 2017.png" class="main_logo " alt="main_logo">
