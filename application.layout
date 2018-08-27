@@ -150,7 +150,11 @@
         <section class="content_container main_container position_relative">
             <div class="row header mobile_margin">
                 <div class="col-md-4 col-sm-4 col-xs-12">
-                    <div id="google_translate_element"></div>
+                    <div id="desktopHeader">
+                        <div id="g_translater" class="text-center">
+                            <div id="google_translate_element"></div>
+                        </div>
+                    </div>
                     <script type="text/javascript">
                         function googleTranslateElementInit() {
                           new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,fr,zh-CN,zh-TW,es,sr', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-69974835-39'}, 'google_translate_element');
