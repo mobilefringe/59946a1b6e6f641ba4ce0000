@@ -34,7 +34,7 @@
                 <div id="promos_container">
                     <script id="promos_template" type="x-tmpl-mustache/text">
                         <div id="mm_page_content"></div>
-                        <br>
+                        <br class="show_page">
                         <hr>
                         <div class="row promo_item cats_row" data-cat="{{cat_list}}">
                             <div class="col-md-3">
@@ -82,6 +82,9 @@
             $.getJSON(pages_json).done(function(data) {
                 // $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content').html(data.body);
+                if($('#mm_page_content').length > 0) {
+                    
+                }
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
                     $("#404_msg").fadeIn("fast");
