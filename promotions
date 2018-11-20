@@ -83,7 +83,7 @@
                 // $('#mm_page_title').html(data.title.toUpperCase());
                 $('#mm_page_content').html(data.body);
                 if($('#mm_page_content').length > 0) {
-                    
+                    $(".show_page").show();
                 }
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
