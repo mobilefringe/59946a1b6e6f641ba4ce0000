@@ -30,7 +30,7 @@
         <div class="row">
             <div class="col-md-12">
                 <p class="hidden_now" id="no_promos">Sorry, there are no promotions at this time. Please check back soon.</p>
-                <div>
+                <div id="promo_pages_container">
                     <script id="promo_pages_template" type="x-tmpl-mustache/text">
                         
                     </script>
