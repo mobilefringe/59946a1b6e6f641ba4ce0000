@@ -30,11 +30,13 @@
 <div class="content_container main_container mobile_padding">
     <div class="margin_25_across">
         <div class="row">
+         
         <div class="row">
             <div class="col-md-12">
                 <div id="mm_page_content"></div>
             </div>
         </div>
+        <hr>
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6"> 
@@ -73,8 +75,7 @@
                 </div>
             </div>
         </div>
-        <hr>
-        
+       
     </div>
 </div>
 <script>
