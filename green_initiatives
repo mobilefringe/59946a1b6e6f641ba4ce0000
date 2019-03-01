@@ -8,6 +8,9 @@
         <div class="col-md-3" style="padding: 0;">
             <h5 class="active_heading">ACT GREEN INITIATIVES</h5>
         </div>
+         <div class="col-md-3">
+            <h5><a href="/walking_club">LEED</a></h5>
+        </div>
     </div>
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
