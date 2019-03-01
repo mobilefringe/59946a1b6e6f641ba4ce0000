@@ -6,7 +6,7 @@
     <div class="row hidden_phone">
       
         <div class="col-md-3" style="padding: 0;">
-            <h5 class="active_heading">ACT GREEN INITIATIVES</h5>
+            <h5><a href="/green_initiatives">ACT GREEN INITIATIVES</a></h5>
         </div>
          <div class="col-md-3">
             <h5><a href="/walking_club">LEED</a></h5>
