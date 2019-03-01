@@ -4,7 +4,6 @@
 </div>
 <div class="store_list_head main_container">
     <div class="row hidden_phone">
-      
         <div class="col-md-6"></div>
             <h5><a href="/green_initiatives">ACT GREEN INITIATIVES</a></h5>
         </div>
@@ -15,9 +14,7 @@
     <h5 class="text-center tap_here show_phone">
         <select id="option_selector" class="link_selector">
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
-            <option value="/hours">Hours</option>
-            <option value="/jobs">Jobs</option>
-            <option value="/community">Non-Profit</option>
+            <option value="/green_initiatives">ACT Green Initiatives</option>>
         </select>
     </h5>
 </div>
