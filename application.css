@@ -1507,6 +1507,9 @@ h4 {
     position: absolute;
     top: 0;
     right: 0;
+    p {
+        display: none;
+    }
 }
 .post_icon {
     padding-bottom: 5px;
