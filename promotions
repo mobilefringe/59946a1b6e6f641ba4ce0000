@@ -1,0 +1,98 @@
+<div class="main_banner text-center">
+    <h3>promotions</h3>
+    <p>explore • enjoy • shop</p>
+</div>
+<div class="store_list_head main_container">
+    <div class="row hidden_phone">
+        <div class="col-md-4">
+            <h5 class="active_heading">PROMOTIONS</h5>
+        </div>
+        <div class="col-md-4">
+            <h5><a href="/events">EVENTS</a></h5>
+        </div>
+        <div class="col-md-4">
+            <h5><a href="/contests">CONTESTS</a></h5>
+        </div>
+        
+     
+    </div>
+    <h5 class="text-center tap_here show_phone">
+        <label for="option_selector">Options</label>
+        <select id="option_selector" class="link_selector">
+            <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
+            <option value="/events">Events</option>
+            <option value="/contests">Contests</option>
+        </select>
+    </h5>
+</div>
+ <div class="content_container main_container">
+    <div class="margin_25_across">
+        <div class="row">
+            <div class="col-md-12">
+                <p class="hidden_now" id="no_promos">Sorry, there are no promotions at this time. Please check back soon.</p>
+                
+                <div id="promos_container">
+                    <script id="promos_template" type="x-tmpl-mustache/text">
+                        <div id="mm_page_content"></div>
+                        <br class="show_page hidden_now">
+                        <hr class="show_page hidden_now">
+                        <br class="show_page hidden_now">
+                        <div class="row promo_item cats_row" data-cat="{{cat_list}}">
+                            <div class="col-md-3">
+                                <div class="cropped_image">
+                                    <img src="{{image_url}}" alt="{{name}}" />
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <h2 class="promo_list_name"><a href="/promotions/{{slug}}">{{name}}</a></h2>
+                                <p>
+                                    <a href="{{store_slug}}" style="{{store_show}}"><span class="underline promo_store">{{store_name}}</span></a>
+                                    <span class="promo_dates">{{dates}}</span>
+                                </p>
+                                <div class="promo_list_desc">{{description_short}}</div>
+                                <a class="read_more" href="/promotions/{{slug}}">Read More</a>
+                            </div>
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function(e){
+        init(e);
+        function renderAll (){
+            var promotions = getPromotionsList().sortBy(function(o){ return o.end_date });
+            var published_promos = [];
+            $.each( promotions , function( key, val ){
+                today = moment();
+                webDate = moment(val.show_on_web_date);
+                if (today >= webDate) {
+                    published_promos.push(val)
+                } 
+            });
+            if(published_promos.length > 0){
+                renderPromotions("#promos_container","#promos_template", published_promos, "Devonshire Mall");
+            } else {
+                $('#no_promos').show()
+            }
+            prefix = get_prefix();
+            var pages_json = prefix + "/pages/devonshire-black-friday-deals.json"
+            $.getJSON(pages_json).done(function(data) {
+                // $('#mm_page_title').html(data.title.toUpperCase());
+                $('#mm_page_content').html(data.body);
+                if($('#mm_page_content').length > 0) {
+                    $(".show_page").show();
+                }
+            }).fail(function(jqXHR) {
+                if (jqXHR.status == 404) {
+                    $("#404_msg").fadeIn("fast");
+                }
+            });
+            show_content();
+        }
+		loadMallDataCached(renderAll); 
+    })
+</script>
