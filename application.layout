@@ -90,7 +90,7 @@
                     <a href="#"  class="submenu_expander">
                         GUEST SERVICES
                         <img class="menu_icon plus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461166990000/open_submenu.png" style="display: inline;" alt="open"">
-						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;">
+						<img class="menu_icon minus_icon" src="//codecloud.cdn.speedyrails.net/sites/59946a1b6e6f641ba4ce0000/image/png/1461179572000/close_submenu.png" style="display: none;" alt="close">
                     </a>
                     <ul class="sub_menu hidden_now">
                         <li><a href="/guest_services">Guest Services</a></li>
