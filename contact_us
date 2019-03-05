@@ -47,7 +47,7 @@
                 <form name="contact_form" id="contact_form" method="post">
                     <div class="row">
                         <div class="col-md-6 margin_30">
-                            <label for="name">Options</label>
+                            <label for="name">Name</label>
                             <input name="name" id="name" class="form-control" type="text" value="" placeholder="Your Name" required>
                         </div>    
                         <div class="col-md-6 margin_30">
