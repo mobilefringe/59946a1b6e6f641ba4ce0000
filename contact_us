@@ -63,7 +63,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 margin_30">
-                            <label for="message">Options</label>
+                            <label for="message">Message</label>
                             <textarea name="message" id="message" rows="8" class="form-control" placeholder="Your Message" required></textarea>
                         </div>
                     </div>
