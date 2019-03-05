@@ -1502,6 +1502,9 @@ h4 {
     position: absolute;
     top: -37px;
     right: -1px;
+    p {
+        display: none;
+    }
 }
 .post_share_icons {
     position: absolute;
