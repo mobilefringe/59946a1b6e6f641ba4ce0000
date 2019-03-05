@@ -56,6 +56,7 @@
                             </a>
                             <a href="https://twitter.com/home?status={{twitter_title}} https://www.devonshiremall.com/{{slug}}" target="_blank">
                                 <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
+                                <p>Twitter Link</p>
                             </a>
                         </div>
                         <a href="{{slug}}"><h2 class="post_header">{{title}}</h2></a>
