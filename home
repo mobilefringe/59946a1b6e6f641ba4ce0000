@@ -93,7 +93,7 @@
             <script id="insta_template" type="x-tmpl-mustache/text">
                 <div class="ig-image">
                     <a href="{{link}}" target="_blank" title="{{caption}}">
-                        <img src="{{image}}" />
+                        <img src="{{image}}" alt="{{ caption}}" />
                     </a>
                 </div>
             </script>
