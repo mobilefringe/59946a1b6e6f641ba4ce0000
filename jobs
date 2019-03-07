@@ -14,7 +14,7 @@
             <h5><a href="/community">NON-PROFIT</a></h5>
         </div>
         <div class="col-md-3" style="padding: 0;">
-            <h5><a href="/live_in_awe">live in awe</a></h5>
+            <h5><a href="/live_in_awe">Live In Awe</a></h5>
         </div>
     </div>
     <h5 class="text-center tap_here show_phone">
@@ -23,7 +23,7 @@
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/hours">Hours</option>
             <option value="/community">Non-Profit</option>
-            <option value="/live_in_awe">live in awe</option>
+            <option value="/live_in_awe">Live In Awe</option>
         </select>
     </h5>
 </div>
