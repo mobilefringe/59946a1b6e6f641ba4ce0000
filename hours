@@ -23,7 +23,7 @@
             <option value="" disabled selected>TAP FOR MORE OPTIONS</option>
             <option value="/jobs">Jobs</option>
             <option value="/community">Non-Profit</option>
-            <option value="/live_in_awe">live in awe</option>
+            <option value="/live_in_awe">Live In Awe</option>
         </select>
     </h5>
 </div>
