@@ -332,7 +332,7 @@ h4 {
     line-height: 28px;
     font-weight: lighter;
     a {
-        color: #0e7ac1;
+        color: #0e7ac1; !important;
     }
 }
 
