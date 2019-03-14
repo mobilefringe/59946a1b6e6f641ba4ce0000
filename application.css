@@ -331,6 +331,9 @@ h4 {
     font-size: 20px;
     line-height: 28px;
     font-weight: lighter;
+    a {
+        color: #0e7ac1;
+    }
 }
 
 .fixed_header{
