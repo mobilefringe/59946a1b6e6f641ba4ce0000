@@ -53,11 +53,12 @@
                 <a href="https://www.facebook.com/devonshiremall" target="_blank" class="show_phone">
                     <img src="//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/png/1506454448000/FB Devon.png" alt="fb">
                 </a>
-                <div class="hidden_phone social_box text-center" id="social_fb">
+                <div class="hidden_phone facebook_box social_box text-center" id="social_fb">
                     <img src="//codecloud.cdn.speedyrails.net/sites/57f7f01f6e6f647835890000/image/png/1463434709000/facebook_post.png" class="" alt="facebook post">
                     <a href="#" id="latest_fb_link" target="_blank"><p id="latest_fb" class="latest_post"></p></a>
                     <p>
-                        <a  class="social_link_blank" href="https://www.facebook.com/devonshiremall" target="_blank">Facebook/DevonshireMall</a><br/>
+                        <!--<a  class="social_link_blank" href="https://www.facebook.com/devonshiremall" target="_blank">Facebook/DevonshireMall</a><br/>-->
+                        <a class="social_link_blank" href="https://www.facebook.com/devonshiremall" target="_blank">Follow Devonshire Mall on Facebook</a> 
                         <span id="latest_fb_date"></span>    
                     </p>
                 </div>
