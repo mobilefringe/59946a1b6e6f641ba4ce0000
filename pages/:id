@@ -30,6 +30,13 @@
                     $("#404_msg").fadeIn("fast");
                 }
             }); 
+            
+            // check if top header should be shown 
+            if (slug == 'devonshire-covid-19-update') {
+                $("#full_banner").hide();
+                $("#extra_padding").show();
+            } 
+            
             show_content();
         }
         loadMallDataCached(renderAll); 
