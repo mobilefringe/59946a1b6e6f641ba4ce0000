@@ -7,7 +7,6 @@
     <div class="margin_25_across">
         <div class="row">
             <div class="col-md-12">
-                <div id="extra_padding" class="margin_20 hidden_now"></div>
                 <div id="mm_page_content"></div>
             </div>
         </div>
@@ -34,7 +33,6 @@
             // check if top header should be shown 
             if (slug == 'devonshire-covid-19-update') {
                 $("#full_banner").hide();
-                $("#extra_padding").show();
             } 
             
             show_content();
