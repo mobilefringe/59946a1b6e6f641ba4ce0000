@@ -90,8 +90,10 @@
             var pages_json = prefix + "/pages/devonshire-extra-hours.json"
             $.getJSON(pages_json).done(function(data) {
                 console.log("data", data.body)
-                $('#mm_page_content').html(data.body);
-                $("#extra_hours").show();
+                if (data.body.length > 0){
+                    $('#mm_page_content').html(data.body);
+                    $("#extra_hours").show();
+                }
             }).fail(function(jqXHR) {
                 if (jqXHR.status == 404) {
                     $("#404_msg").fadeIn("fast");
