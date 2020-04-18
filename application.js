@@ -38,7 +38,7 @@ function renderContest(container, template, collection){
     var template_html = $(template).html();
     Mustache.parse(template_html);   // optional, speeds up future uses
     $.each( collection , function( key, val){
-        val.image_url = "https://www.mallmaverick.com" + val.photo_url;
+        val.image_url = "https://www.assets.mallmaverick.com" + val.photo_url;
         val.property_name = getPropertyDetails().name;
         
         var rendered = Mustache.render(template_html,val);
@@ -167,7 +167,7 @@ function renderGallery(container, template, collection){
         if (val.photo_url.indexOf('missing.png') > -1) {
             val.gallery_image = "//codecloud.cdn.speedyrails.net/sites/59c082786e6f6462ee1d0000/image/jpeg/1506715414000/devonshire_default.jpg";
         } else {
-            val.gallery_image = "//www.mallmaverick.com" + val.photo_url;
+            val.gallery_image = "//www.assets.mallmaverick.com" + val.photo_url;
         }
         var rendered = Mustache.render(template_html,val);
         item_rendered.push(rendered);
