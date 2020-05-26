@@ -28,7 +28,6 @@
             <div class="row">
                 <div class="col-sm-12">
                     <label class="agree_terms">
-                        <!--<input id="agree_terms" type="checkbox" required data-validation="required" tabindex="3"/> -->
                         <input aria-required="" id="cm-privacy-consent" name="cm-privacy-consent" required="" type="checkbox" tabindex="3">
                             I agree to receive communications from Devonshire Mall.
                     </label>
@@ -36,7 +35,6 @@
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <!--<button class="newsletter_btn animated_btn" type="submit" tabindex="4">Subscribe</button>-->
                     <button class="newsletter_btn animated_btn" type="submit" tabindex="4">Subscribe</button>
                 </div>
             </div>
